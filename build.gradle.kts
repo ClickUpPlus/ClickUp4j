@@ -12,6 +12,7 @@ dependencies {
     compileOnly("org.jetbrains", "annotations", "23.0.0")
 
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("org.json:json:20211205")
 }
 
 group = "pw.chew.clickup"
