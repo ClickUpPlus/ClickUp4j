@@ -15,7 +15,15 @@
  */
 package pw.chew.clickup4j.internal;
 
+import okhttp3.OkHttpClient;
 import pw.chew.clickup4j.api.ClickUp4j;
 
 public class ClickUp4jImpl implements ClickUp4j {
+    private final OkHttpClient client;
+    private final String token;
+
+    public ClickUp4jImpl(String token, OkHttpClient client) {
+        this.token = token;
+        this.client = client;
+    }
 }

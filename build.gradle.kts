@@ -9,12 +9,15 @@ repositories {
 }
 
 dependencies {
+    compileOnly("org.jetbrains", "annotations", "23.0.0")
+
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
 }
 
 group = "pw.chew.clickup"
 version = "1.0-SNAPSHOT"
 description = "ClickUp4j"
-java.sourceCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 java {
     withSourcesJar()
