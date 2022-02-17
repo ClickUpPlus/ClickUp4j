@@ -16,6 +16,7 @@
 package pw.chew.clickup4j.api;
 
 import pw.chew.clickup4j.api.entities.Task;
+import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.util.List;
 
@@ -36,7 +37,7 @@ public interface ClickUp4j {
      * @param listId the list ID
      * @return the list of tasks
      */
-    List<Task> retrieveTasks(String listId);
+    Requester<List<Task>> retrieveTasks(String listId);
 
     /**
      * Retrieves a single task by ID. This can be from any workspace the user has access to.

@@ -16,10 +16,16 @@
 package pw.chew.clickup4j.internal;
 
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import org.json.JSONArray;
 import pw.chew.clickup4j.api.ClickUp4j;
 import pw.chew.clickup4j.api.entities.Task;
+import pw.chew.clickup4j.internal.entities.TaskImpl;
+import pw.chew.clickup4j.internal.requests.Requester;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 public class ClickUp4jImpl implements ClickUp4j {
     private final OkHttpClient client;
@@ -36,9 +42,26 @@ public class ClickUp4jImpl implements ClickUp4j {
     }
 
     @Override
-    public List<Task> retrieveTasks(String listId) {
-        // TODO implement
-        return null;
+    public Requester<List<Task>> retrieveTasks(String listId) {
+        Request request = new Request.Builder()
+            .get()
+            .url("https://api.clickup.com/api/v2/list/" + listId + "/task")
+            .addHeader("Authorization", token)
+            .build();
+
+        Function<String, List<Task>> mapper = response -> {
+            JSONArray jsonArray = new JSONArray(response);
+
+            List<Task> tasks = new ArrayList<>();
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                tasks.add(new TaskImpl(jsonArray.getJSONObject(i), this));
+            }
+
+            return tasks;
+        };
+
+        return new Requester<>(client, request, mapper);
     }
 
     @Override
