@@ -17,6 +17,9 @@ package pw.chew.clickup4j.internal;
 
 import okhttp3.OkHttpClient;
 import pw.chew.clickup4j.api.ClickUp4j;
+import pw.chew.clickup4j.api.entities.Task;
+
+import java.util.List;
 
 public class ClickUp4jImpl implements ClickUp4j {
     private final OkHttpClient client;
@@ -25,5 +28,22 @@ public class ClickUp4jImpl implements ClickUp4j {
     public ClickUp4jImpl(String token, OkHttpClient client) {
         this.token = token;
         this.client = client;
+    }
+
+    @Override
+    public String getToken() {
+        return token;
+    }
+
+    @Override
+    public List<Task> retrieveTasks(String listId) {
+        // TODO implement
+        return null;
+    }
+
+    @Override
+    public Task retrieveTask(String taskId) {
+        // TODO implement
+        return null;
     }
 }

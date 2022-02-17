@@ -15,9 +15,35 @@
  */
 package pw.chew.clickup4j.api;
 
+import pw.chew.clickup4j.api.entities.Task;
+
+import java.util.List;
+
 /**
  * The core of ClickUp4j. All parts of the API can be accessed starting from this class
  */
 public interface ClickUp4j {
+    /**
+     * Gets the token currently being used for requests.
+     *
+     * @return the token
+     */
+    String getToken();
 
+    /**
+     * Returns a list of tasks in a specified list ID.
+     *
+     * @param listId the list ID
+     * @return the list of tasks
+     */
+    List<Task> retrieveTasks(String listId);
+
+    /**
+     * Retrieves a single task by ID. This can be from any workspace the user has access to.
+     * <br>This will <b>NOT</b> return values for the custom fields.
+     *
+     * @param taskId the task ID
+     * @return the task
+     */
+    Task retrieveTask(String taskId);
 }
