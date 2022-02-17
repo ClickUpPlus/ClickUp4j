@@ -15,15 +15,45 @@
  */
 package pw.chew.clickup4j.api.entities;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.awt.Color;
+import java.time.Duration;
 import java.time.OffsetDateTime;
 import java.util.List;
 
+/**
+ * <h2>ClickUp Task</h2>
+ *
+ * <p>Tasks are the heart of ClickUp, and are the lowest level of organization in the hierarchy.
+ * <br><a href="https://docs.clickup.com/en/articles/856274-task-ids">View the ClickUp Docs for more info.</a>
+ */
 public interface Task {
+    /**
+     * The unique ID of this task.
+     * <p>All IDs are unique on ClickUp, so this can safely be used as a primary key.
+     *
+     * @return the ID of this task
+     */
+    @NotNull
     String getId();
 
+    /**
+     * The custom ID for this task.
+     * <p>This feature is exclusive to the <i>Business</i> plan or above, so this is likely to be null.
+     *
+     * @return A possibly null custom ID for this task
+     */
+    @Nullable
     String getCustomId();
 
+    /**
+     * The name of this task. This is also referred to as the title.
+     *
+     * @return the name of this task
+     */
+    @NotNull
     String getName();
 
     String getTextContent();
@@ -42,8 +72,9 @@ public interface Task {
 
     User getCreator();
 
-    // TODO: Confirm return type
     List<User> getAssignees();
+
+    List<User> getWatchers();
 
     // TODO: Checklists
     // TODO: Tags
@@ -58,11 +89,15 @@ public interface Task {
 
     OffsetDateTime getStartDate();
 
-    // TODO: Find actual return type
-    void getTimeEstimate();
+    /**
+     * Returns the estimated time to complete this task.
+     *
+     * @return the estimated time to complete this task
+     */
+    Duration getTimeEstimate();
 
     // TODO: Find actual return type
-    void getTimeSpent();
+    Duration getTimeSpent();
 
     // TODO: Custom Fields
 

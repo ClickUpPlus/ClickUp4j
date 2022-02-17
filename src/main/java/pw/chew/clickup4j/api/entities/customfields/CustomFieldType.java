@@ -38,7 +38,7 @@ public enum CustomFieldType {
     /**
      * Represents a date field. This field is actually validated and returns an OffsetDateTime if cast to
      * a DateCustomField.
-     * @see {@link DateCustomField}
+     * @see DateCustomField
      */
     DATE(4),
     /**
