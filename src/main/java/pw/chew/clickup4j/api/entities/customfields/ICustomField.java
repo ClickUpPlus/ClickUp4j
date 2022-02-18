@@ -65,4 +65,12 @@ public interface ICustomField {
      * @return when this custom field was created
      */
     OffsetDateTime getTimeCreated();
+
+    /**
+     * Whether this is a required field. Unlike the name implies, {@link #getValue()} may still be {@code null}..
+     * <p>This feature is exclusive to the <i>Business</i> plan or above, so this is likely to be {@code false}.
+     *
+     * @return if this is a required custom field.
+     */
+    boolean isRequired();
 }

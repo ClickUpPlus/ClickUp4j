@@ -17,6 +17,7 @@ package pw.chew.clickup4j.api.entities;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.awt.Color;
 import java.time.Duration;
@@ -114,6 +115,14 @@ public interface Task {
     Space retrieveSpace();
 
     String getUrl();
+
+    /**
+     * Resolves missing fields in this task.
+     * <br>Due to API limitations, this excludes custom field values.
+     *
+     * @return this task with all missing fields resolved
+     */
+    Requester<Task> resolve();
 
     /**
      * Represents a status of a task.
