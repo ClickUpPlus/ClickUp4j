@@ -24,6 +24,7 @@ import pw.chew.clickup4j.api.ClickUp4j;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.internal.entities.TaskImpl;
 import pw.chew.clickup4j.internal.requests.Requester;
+import pw.chew.clickup4j.internal.requests.Route;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,9 +46,7 @@ public class ClickUp4jImpl implements ClickUp4j {
 
     @Override
     public Requester<List<Task>> retrieveTasks(@NotNull String listId) {
-        Request request = new Request.Builder()
-            .get()
-            .url("https://api.clickup.com/api/v2/list/" + listId + "/task")
+        Request request = Route.List.GET_TASKS.build(listId)
             .addHeader("Authorization", token)
             .build();
 
@@ -72,9 +71,7 @@ public class ClickUp4jImpl implements ClickUp4j {
             throw new IllegalArgumentException("Task ID cannot be empty");
         }
 
-        Request request = new Request.Builder()
-            .get()
-            .url("https://api.clickup.com/api/v2/task/" + taskId)
+        Request request = Route.Task.GET_TASK.build(taskId)
             .addHeader("Authorization", token)
             .build();
 
