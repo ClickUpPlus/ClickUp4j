@@ -23,9 +23,12 @@ import pw.chew.clickup4j.api.ClickUp4j;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.api.entities.User;
+import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.time.Duration;
+import java.time.Instant;
 import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
 import java.util.List;
 
 public class TaskImpl implements Task {
@@ -74,17 +77,22 @@ public class TaskImpl implements Task {
 
     @Override
     public OffsetDateTime getDateCreated() {
-        return null;
+        String date = data.getString("date_created");
+        return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
 
     @Override
     public OffsetDateTime getDateUpdated() {
-        return null;
+        String date = data.getString("date_updated");
+        return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
 
     @Override
     public OffsetDateTime getDateClosed() {
-        return null;
+        if (data.isNull("date_closed")) return null;
+
+        String date = data.getString("date_closed");
+        return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
 
     @Override
@@ -124,12 +132,14 @@ public class TaskImpl implements Task {
 
     @Override
     public Duration getTimeEstimate() {
-        return null;
+        long timeEstimate = data.getLong("time_estimate");
+        return Duration.ofMillis(timeEstimate);
     }
 
     @Override
     public Duration getTimeSpent() {
-        return null;
+        long timeSpent = data.getLong("time_spent");
+        return Duration.ofMillis(timeSpent);
     }
 
     @Override
@@ -155,5 +165,10 @@ public class TaskImpl implements Task {
     @Override
     public String getUrl() {
         return null;
+    }
+
+    @Override
+    public Requester<Task> resolve() {
+        return api.retrieveTask(getId());
     }
 }
