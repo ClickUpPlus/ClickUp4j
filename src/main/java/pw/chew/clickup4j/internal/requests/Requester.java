@@ -45,7 +45,9 @@ public class Requester<T> {
             public void onResponse(@NotNull Call call, @NotNull Response response) {
                 // get the response as JSON
                 try {
-                    T result = handler.apply(response.body().string());
+                    String string = response.body().string();
+
+                    T result = handler.apply(string);
                     onSuccess.accept(result);
                 } catch (Exception e) {
                     onFailure.accept(e);
@@ -59,11 +61,20 @@ public class Requester<T> {
         });
     }
 
+    /**
+     * Queues this request. The {@code onSuccess} callback will be called when the request completes successfully.
+     *
+     * @param onSuccess The callback to call when the request completes successfully.
+     */
+    public void queue(Consumer<T> onSuccess) {
+        queue(onSuccess, (Throwable t) -> {});
+    }
+
     public T complete() {
         Call call = client.newCall(request);
 
         try(Response response = call.execute()) {
-            return handler.apply(response);
+            return handler.apply(response.body().string());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
