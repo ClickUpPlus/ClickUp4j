@@ -17,7 +17,9 @@ package pw.chew.clickup4j.internal;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
+import org.json.JSONObject;
 import pw.chew.clickup4j.api.ClickUp4j;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.internal.entities.TaskImpl;
@@ -42,7 +44,7 @@ public class ClickUp4jImpl implements ClickUp4j {
     }
 
     @Override
-    public Requester<List<Task>> retrieveTasks(String listId) {
+    public Requester<List<Task>> retrieveTasks(@NotNull String listId) {
         Request request = new Request.Builder()
             .get()
             .url("https://api.clickup.com/api/v2/list/" + listId + "/task")
@@ -65,8 +67,22 @@ public class ClickUp4jImpl implements ClickUp4j {
     }
 
     @Override
-    public Task retrieveTask(String taskId) {
-        // TODO implement
-        return null;
+    public Requester<Task> retrieveTask(@NotNull String taskId) {
+        if (taskId.isEmpty()) {
+            throw new IllegalArgumentException("Task ID cannot be empty");
+        }
+
+        Request request = new Request.Builder()
+            .get()
+            .url("https://api.clickup.com/api/v2/task/" + taskId)
+            .addHeader("Authorization", token)
+            .build();
+
+        Function<String, Task> mapper = response -> {
+            JSONObject jsonObject = new JSONObject(response);
+            return new TaskImpl(jsonObject, this);
+        };
+
+        return new Requester<>(client, request, mapper);
     }
 }

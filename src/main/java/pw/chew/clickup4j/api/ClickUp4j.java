@@ -15,6 +15,7 @@
  */
 package pw.chew.clickup4j.api;
 
+import org.jetbrains.annotations.NotNull;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.internal.requests.Requester;
 
@@ -37,14 +38,15 @@ public interface ClickUp4j {
      * @param listId the list ID
      * @return the list of tasks
      */
-    Requester<List<Task>> retrieveTasks(String listId);
+    Requester<List<Task>> retrieveTasks(@NotNull String listId);
 
     /**
      * Retrieves a single task by ID. This can be from any workspace the user has access to.
      * <br>This will <b>NOT</b> return values for the custom fields.
+     * <br>Custom IDs are not supported with this method.
      *
      * @param taskId the task ID
      * @return the task
      */
-    Task retrieveTask(String taskId);
+    Requester<Task> retrieveTask(@NotNull String taskId);
 }

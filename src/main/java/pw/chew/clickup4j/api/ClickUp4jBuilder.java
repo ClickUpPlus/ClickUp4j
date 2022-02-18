@@ -31,7 +31,12 @@ public class ClickUp4jBuilder {
     protected OkHttpClient httpClient = null;
     protected String token;
 
-    private ClickUp4jBuilder(@Nullable String token) {
+    /**
+     * Create a builder using the specified token
+     *
+     * @param token The token to use
+     */
+    public ClickUp4jBuilder(@Nullable String token) {
         this.token = token;
     }
 
