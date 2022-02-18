@@ -29,6 +29,9 @@ dependencies {
 
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation("org.json:json:20211205")
+
+    // Add Junit as a test dependency
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 }
 
 group = "pw.chew.clickup"
@@ -59,6 +62,10 @@ publishing {
             }
         }
     }
+}
+
+tasks.withType<Test>() {
+    useJUnitPlatform()
 }
 
 tasks.withType<JavaCompile>() {
