@@ -15,6 +15,8 @@
  */
 package pw.chew.clickup4j.api.entities;
 
+import pw.chew.clickup4j.api.ClickUp4j;
+
 import java.time.OffsetDateTime;
 import java.util.List;
 
@@ -58,4 +60,6 @@ public interface TaskList {
     List<Task.Status> getStatuses();
 
     String getPermissionLevel();
+
+    ClickUp4j getClickUp4j();
 }

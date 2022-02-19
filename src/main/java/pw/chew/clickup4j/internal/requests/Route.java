@@ -21,12 +21,16 @@ import okhttp3.Request;
 import java.util.Arrays;
 
 public class Route {
+    public static class List {
+        public static final Route GET_TASKS = new Route("GET", "/list/:list_id/task");
+    }
+
     public static class Task {
         public static final Route GET_TASK = new Route("GET", "/task/:task_id");
     }
 
-    public static class List {
-        public static final Route GET_TASKS = new Route("GET", "/list/:list_id/task");
+    public static class Space {
+        public static final Route GET_SPACE = new Route("GET", "/space/:space_id");
     }
 
     private final String method;

@@ -16,6 +16,7 @@
 package pw.chew.clickup4j.api;
 
 import org.jetbrains.annotations.NotNull;
+import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.internal.requests.Requester;
 
@@ -49,4 +50,12 @@ public interface ClickUp4j {
      * @return the task
      */
     Requester<Task> retrieveTask(@NotNull String taskId);
+
+    /**
+     * Retrieves a space by ID. This can be from any workspace the user has access to.
+     *
+     * @param spaceId the space ID
+     * @return the space
+     */
+    Requester<Space> retrieveSpace(@NotNull String spaceId);
 }

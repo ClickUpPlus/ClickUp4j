@@ -21,7 +21,9 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import pw.chew.clickup4j.api.ClickUp4j;
+import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
+import pw.chew.clickup4j.internal.entities.SpaceImpl;
 import pw.chew.clickup4j.internal.entities.TaskImpl;
 import pw.chew.clickup4j.internal.requests.Requester;
 import pw.chew.clickup4j.internal.requests.Route;
@@ -78,6 +80,24 @@ public class ClickUp4jImpl implements ClickUp4j {
         Function<String, Task> mapper = response -> {
             JSONObject jsonObject = new JSONObject(response);
             return new TaskImpl(jsonObject, this);
+        };
+
+        return new Requester<>(client, request, mapper);
+    }
+
+    @Override
+    public Requester<Space> retrieveSpace(@NotNull String spaceId) {
+        if (spaceId.isEmpty()) {
+            throw new IllegalArgumentException("Task ID cannot be empty");
+        }
+
+        Request request = Route.Space.GET_SPACE.build(spaceId)
+            .addHeader("Authorization", token)
+            .build();
+
+        Function<String, Space> mapper = response -> {
+            JSONObject jsonObject = new JSONObject(response);
+            return new SpaceImpl(jsonObject, this);
         };
 
         return new Requester<>(client, request, mapper);

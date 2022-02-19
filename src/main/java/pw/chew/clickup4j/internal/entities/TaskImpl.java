@@ -158,8 +158,8 @@ public class TaskImpl implements Task {
     }
 
     @Override
-    public Space retrieveSpace() {
-        return null;
+    public Requester<Space> retrieveSpace() {
+        return api.retrieveSpace(getSpaceId());
     }
 
     @Override

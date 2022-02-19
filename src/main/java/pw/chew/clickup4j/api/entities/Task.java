@@ -112,7 +112,7 @@ public interface Task {
 
     String getSpaceId();
 
-    Space retrieveSpace();
+    Requester<Space> retrieveSpace();
 
     String getUrl();
 
@@ -128,6 +128,8 @@ public interface Task {
      * Represents a status of a task.
      */
     interface Status {
+        String getId();
+
         String getStatus();
 
         Color getColor();

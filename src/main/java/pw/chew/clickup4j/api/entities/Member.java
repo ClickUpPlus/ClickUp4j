@@ -15,6 +15,8 @@
  */
 package pw.chew.clickup4j.api.entities;
 
+import pw.chew.clickup4j.api.ClickUp4j;
+
 import java.time.OffsetDateTime;
 
 /**
@@ -37,4 +39,6 @@ public interface Member {
     OffsetDateTime getDateJoined();
 
     OffsetDateTime getDateInvited();
+
+    ClickUp4j getClickUp4j();
 }
