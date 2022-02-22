@@ -34,7 +34,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 }
 
-group = "pw.chew.clickup"
+group = "pw.chew.clickup4j"
 version = "1.0-SNAPSHOT"
 description = "ClickUp4j"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
