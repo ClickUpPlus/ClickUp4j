@@ -15,19 +15,65 @@
  */
 package pw.chew.clickup4j.api.entities;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import pw.chew.clickup4j.api.ClickUp4j;
+
 import java.awt.Color;
+import java.util.List;
 
 /**
- * A Workspace in ClickUp. This is the highest level of organization in ClickUp.
+ * <h2>Workspace</h2>
+ *
+ * This is the highest level of organization in ClickUp.
  */
 public interface Workspace {
+    /**
+     * The ID of the workspace.
+     *
+     * @return The ID of the workspace.
+     */
+    @NotNull
     String getId();
 
+    /**
+     * The human-readable name of the {@link Workspace}.
+     *
+     * @return Never-null String containing the workspace's name.
+     */
+    @NotNull
     String getName();
 
+    /**
+     * The color for this workspace.
+     *
+     * @return Never-null Color object containing the workspace's color.
+     */
+    @NotNull
     Color getColor();
 
+    /**
+     * The avatar or icon for this workspace.
+     * <p>If the workspace does not have an avatar, this will be null.
+     *
+     * @return Nullable String containing the workspace's avatar.
+     */
+    @Nullable
     String getAvatar();
 
-    // TODO: Members
+    /**
+     * Returns a list of all the {@link Member members} in this workspace.
+     *
+     * @return Never-null List of {@link Member members} in this workspace.
+     */
+    @NotNull
+    List<Member> getMembers();
+
+    /**
+     * Returns this ClickUp4j instance.
+     *
+     * @return Never-null ClickUp4j instance.
+     */
+    @NotNull
+    ClickUp4j getClickUp4j();
 }

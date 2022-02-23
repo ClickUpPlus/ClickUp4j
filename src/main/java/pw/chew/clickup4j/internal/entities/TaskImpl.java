@@ -25,11 +25,13 @@ import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.api.entities.User;
 import pw.chew.clickup4j.internal.requests.Requester;
 
+import java.awt.Color;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TaskImpl implements Task {
     private final JSONObject data;
@@ -57,17 +59,17 @@ public class TaskImpl implements Task {
 
     @Override
     public String getTextContent() {
-        return data.getString("text_content");
+        return data.getString("content");
     }
 
     @Override
     public String getDescription() {
-        return data.getString("description");
+        return data.optString("description");
     }
 
     @Override
-    public Status getStatus() {
-        return null;
+    public @NotNull Status getStatus() {
+        return new StatusImpl(data.getJSONObject("status"));
     }
 
     @Override
@@ -97,17 +99,19 @@ public class TaskImpl implements Task {
 
     @Override
     public User getCreator() {
-        return null;
+        return new UserImpl(data.getJSONObject("creator"), api);
     }
 
     @Override
+    @NotNull
     public List<User> getAssignees() {
-        return null;
+        return data.getJSONArray("assignees").toList().stream().map(o -> new UserImpl((JSONObject) o, api)).collect(Collectors.toList());
     }
 
     @Override
+    @NotNull
     public List<User> getWatchers() {
-        return null;
+        return data.getJSONArray("watchers").toList().stream().map(o -> new UserImpl((JSONObject) o, api)).collect(Collectors.toList());
     }
 
     @Override
@@ -121,13 +125,21 @@ public class TaskImpl implements Task {
     }
 
     @Override
+    @Nullable
     public OffsetDateTime getDueDate() {
-        return null;
+        String date = data.optString("due_date");
+        if (date == null) return null;
+
+        return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
 
     @Override
+    @Nullable
     public OffsetDateTime getStartDate() {
-        return null;
+        String date = data.optString("start_date");
+        if (date == null) return null;
+
+        return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
 
     @Override
@@ -163,12 +175,46 @@ public class TaskImpl implements Task {
     }
 
     @Override
+    @NotNull
     public String getUrl() {
-        return null;
+        return data.getString("url");
     }
 
     @Override
     public Requester<Task> resolve() {
         return api.retrieveTask(getId());
+    }
+
+    public static class StatusImpl implements Status {
+        private final JSONObject data;
+
+        public StatusImpl(JSONObject data) {
+            this.data = data;
+        }
+
+        @Override
+        public String getId() {
+            return data.getString("id");
+        }
+
+        @Override
+        public String getStatus() {
+            return data.getString("status");
+        }
+
+        @Override
+        public Color getColor() {
+            return Color.decode("#" + data.getString("color"));
+        }
+
+        @Override
+        public int getOrderIndex() {
+            return data.getInt("orderindex");
+        }
+
+        @Override
+        public String getType() {
+            return data.getString("type");
+        }
     }
 }

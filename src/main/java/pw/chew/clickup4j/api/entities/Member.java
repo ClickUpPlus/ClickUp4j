@@ -15,6 +15,7 @@
  */
 package pw.chew.clickup4j.api.entities;
 
+import org.jetbrains.annotations.Nullable;
 import pw.chew.clickup4j.api.ClickUp4j;
 
 import java.time.OffsetDateTime;
@@ -32,6 +33,7 @@ public interface Member {
 
     int getRole();
 
+    @Nullable
     String getCustomRole();
 
     OffsetDateTime getLastActive();

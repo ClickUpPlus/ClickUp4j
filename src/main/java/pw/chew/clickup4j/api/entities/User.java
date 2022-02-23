@@ -15,15 +15,59 @@
  */
 package pw.chew.clickup4j.api.entities;
 
-import java.awt.Color;
-import java.time.OffsetDateTime;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import pw.chew.clickup4j.api.ClickUp4j;
 
+import java.awt.Color;
+
+/**
+ * <h2>ClickUp User</h2>
+ *
+ * The user entity represents a user in the ClickUp system.
+ * <br>
+ * This class is a little weird due to inconsistencies in the ClickUp API.
+ * From what I could gather, these are the fields that appear in every reference to a user.
+ * Member may have additional fields, but when they show up is infrequent.
+ */
 public interface User {
+    /**
+     * The unique ID of the user.
+     *
+     * @return the user ID
+     */
     long getId();
 
+    /**
+     * This user's username. This is what is displayed in the ClickUp UI.
+     *
+     * @return the username
+     */
+    @NotNull
     String getUsername();
 
+    /**
+     * The color for this user.
+     *
+     * @return the color
+     */
+    @NotNull
     Color getColor();
 
+    /**
+     * Returns a link to this user's profile picture.
+     * <br>This will be {@code null} if the user has no profile picture.
+     *
+     * @return the possibly-null profile picture link
+     */
+    @Nullable
     String getProfilePicture();
+
+    /**
+     * Returns this ClickUp4j instance.
+     *
+     * @return the ClickUp4j instance
+     */
+    @NotNull
+    ClickUp4j getClickUp4j();
 }

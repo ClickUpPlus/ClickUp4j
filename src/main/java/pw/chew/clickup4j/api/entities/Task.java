@@ -57,11 +57,31 @@ public interface Task {
     @NotNull
     String getName();
 
+    /**
+     * Returns the text content of this task.
+     * <br>The API seems to return the same as {@link #getDescription()}.
+     *
+     * @return the description of this task
+     * @see #getDescription()
+     */
     String getTextContent();
 
+    /**
+     * Returns the complete description of this task.
+     *
+     * @return the description of this task
+     */
+    @Nullable
     String getDescription();
 
+    /**
+     * Returns the status of this task.
+     *
+     * @return the status of this task
+     */
+    @NotNull
     Status getStatus();
+
 
     String getOrderIndex();
 
@@ -71,10 +91,31 @@ public interface Task {
 
     OffsetDateTime getDateClosed();
 
+    /**
+     * Returns the user who created this task.
+     *
+     * @return the user who created this task
+     */
     User getCreator();
 
+    /**
+     * Returns a list of {@link User users} who are assigned to work on this task.
+     * <br>If the space doesn't have {@link Space#isMultipleAssignees()} enabled, this will return a list of one user.
+     *
+     * @return a list of users assigned to work on this task
+     */
+    @NotNull
     List<User> getAssignees();
 
+    /**
+     * Returns the watchers for this task.
+     * This list will be empty if this task was retrieved from
+     * {@link pw.chew.clickup4j.api.ClickUp4j#retrieveTasks(String)}, but will show up if this task was retrieved from
+     * {@link pw.chew.clickup4j.api.ClickUp4j#retrieveTask(String)}.
+     *
+     * @return the watchers for this task
+     */
+    @NotNull
     List<User> getWatchers();
 
     // TODO: Checklists
@@ -86,8 +127,22 @@ public interface Task {
     // TODO: Make this an enum
     int getPriority();
 
+    /**
+     * Returns the due date of this task, if there is one.
+     * <br>If there is no due date, this will return null.
+     *
+     * @return the possibly-null due date of this task
+     */
+    @Nullable
     OffsetDateTime getDueDate();
 
+    /**
+     * Returns the start date of this task, if there is one.
+     * <br>If there is no start date, this will return null.
+     *
+     * @return the possibly-null start date of this task
+     */
+    @Nullable
     OffsetDateTime getStartDate();
 
     /**
@@ -97,7 +152,12 @@ public interface Task {
      */
     Duration getTimeEstimate();
 
-    // TODO: Find actual return type
+    /**
+     * Returns the time tracked to this task.
+     * <br>This requires the space to have the {@code Time Tracking} ClickApp enabled.
+     *
+     * @return the time spent on this task
+     */
     Duration getTimeSpent();
 
     // TODO: Custom Fields
@@ -114,6 +174,12 @@ public interface Task {
 
     Requester<Space> retrieveSpace();
 
+    /**
+     * The URL link to this task.
+     *
+     * @return the URL link to this task
+     */
+    @NotNull
     String getUrl();
 
     /**
