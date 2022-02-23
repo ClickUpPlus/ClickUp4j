@@ -33,6 +33,10 @@ public class Route {
         public static final Route GET_SPACE = new Route("GET", "/space/:space_id");
     }
 
+    public static class Workspace {
+        public static final Route GET_WORKSPACES = new Route("GET", "/team");
+    }
+
     private final String method;
     private final String path;
 

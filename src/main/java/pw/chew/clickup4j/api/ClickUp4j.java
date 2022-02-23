@@ -18,6 +18,7 @@ package pw.chew.clickup4j.api;
 import org.jetbrains.annotations.NotNull;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
+import pw.chew.clickup4j.api.entities.Workspace;
 import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.util.List;
@@ -58,4 +59,11 @@ public interface ClickUp4j {
      * @return the space
      */
     Requester<Space> retrieveSpace(@NotNull String spaceId);
+
+    /**
+     * Retrieves a list of workspaces the currently authenticated user can access.
+     *
+     * @return the list of workspaces
+     */
+    Requester<List<Workspace>> retrieveWorkspaces();
 }

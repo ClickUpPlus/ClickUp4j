@@ -23,14 +23,17 @@ import org.json.JSONObject;
 import pw.chew.clickup4j.api.ClickUp4j;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
+import pw.chew.clickup4j.api.entities.Workspace;
 import pw.chew.clickup4j.internal.entities.SpaceImpl;
 import pw.chew.clickup4j.internal.entities.TaskImpl;
+import pw.chew.clickup4j.internal.entities.WorkspaceImpl;
 import pw.chew.clickup4j.internal.requests.Requester;
 import pw.chew.clickup4j.internal.requests.Route;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class ClickUp4jImpl implements ClickUp4j {
     private final OkHttpClient client;
@@ -99,6 +102,20 @@ public class ClickUp4jImpl implements ClickUp4j {
             JSONObject jsonObject = new JSONObject(response);
             return new SpaceImpl(jsonObject, this);
         };
+
+        return new Requester<>(client, request, mapper);
+    }
+
+    @Override
+    public Requester<List<Workspace>> retrieveWorkspaces() {
+        Request request = Route.Workspace.GET_WORKSPACES.build()
+            .addHeader("Authorization", token)
+            .build();
+
+        Function<String, List<Workspace>> mapper = response -> new JSONObject(response).getJSONArray("teams")
+            .toList().stream()
+            .map(jsonObject -> new WorkspaceImpl((JSONObject) jsonObject, this))
+            .collect(Collectors.toList());
 
         return new Requester<>(client, request, mapper);
     }
