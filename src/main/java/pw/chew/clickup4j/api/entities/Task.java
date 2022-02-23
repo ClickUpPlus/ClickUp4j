@@ -118,7 +118,15 @@ public interface Task {
     @NotNull
     List<User> getWatchers();
 
-    // TODO: Checklists
+    /**
+     * Returns a list of checklists associated with this task.
+     * <br>This list will be empty if this task has no checklists.
+     *
+     * @return a list of checklists associated with this task
+     */
+    @NotNull
+    List<Checklist> getChecklists();
+
     // TODO: Tags
 
     // TODO: Confirm return type

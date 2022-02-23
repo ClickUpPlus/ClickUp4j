@@ -20,6 +20,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
 import pw.chew.clickup4j.api.ClickUp4j;
+import pw.chew.clickup4j.api.entities.Checklist;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.api.entities.User;
@@ -112,6 +113,11 @@ public class TaskImpl implements Task {
     @NotNull
     public List<User> getWatchers() {
         return data.getJSONArray("watchers").toList().stream().map(o -> new UserImpl((JSONObject) o, api)).collect(Collectors.toList());
+    }
+
+    @Override
+    public @NotNull List<Checklist> getChecklists() {
+        return data.getJSONArray("checlists").toList().stream().map(o -> new ChecklistImpl((JSONObject) o, api)).collect(Collectors.toList());
     }
 
     @Override
