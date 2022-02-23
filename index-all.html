@@ -169,6 +169,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/requests/Route.List.html#GET_TASKS" class="member-name-link">GET_TASKS</a> - Static variable in class pw.chew.clickup4j.internal.requests.<a href="pw/chew/clickup4j/internal/requests/Route.List.html" title="class in pw.chew.clickup4j.internal.requests">Route.List</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/requests/Route.Workspace.html#GET_WORKSPACES" class="member-name-link">GET_WORKSPACES</a> - Static variable in class pw.chew.clickup4j.internal.requests.<a href="pw/chew/clickup4j/internal/requests/Route.Workspace.html" title="class in pw.chew.clickup4j.internal.requests">Route.Workspace</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/AutomaticProgressCustomField.CompleteOn.html#getAsInt()" class="member-name-link">getAsInt()</a> - Method in enum class pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/AutomaticProgressCustomField.CompleteOn.html" title="enum class in pw.chew.clickup4j.api.entities.customfields">AutomaticProgressCustomField.CompleteOn</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html#getAssignee()" class="member-name-link">getAssignee()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/TaskList.html" title="interface in pw.chew.clickup4j.api.entities">TaskList</a></dt>
@@ -176,7 +178,9 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html#getAssignee()" class="member-name-link">getAssignee()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getAssignees()" class="member-name-link">getAssignees()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns a list of <a href="pw/chew/clickup4j/api/entities/User.html" title="interface in pw.chew.clickup4j.api.entities"><code>users</code></a> who are assigned to work on this task.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getAssignees()" class="member-name-link">getAssignees()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/CustomFieldType.html#getAssociatedClass()" class="member-name-link">getAssociatedClass()</a> - Method in enum class pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/CustomFieldType.html" title="enum class in pw.chew.clickup4j.api.entities.customfields">CustomFieldType</a></dt>
@@ -186,6 +190,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/AutomaticProgressCustomField.CompleteOn.html#getAsString()" class="member-name-link">getAsString()</a> - Method in enum class pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/AutomaticProgressCustomField.CompleteOn.html" title="enum class in pw.chew.clickup4j.api.entities.customfields">AutomaticProgressCustomField.CompleteOn</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Workspace.html#getAvatar()" class="member-name-link">getAvatar()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities">Workspace</a></dt>
+<dd>
+<div class="block">The avatar or icon for this workspace.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html#getAvatar()" class="member-name-link">getAvatar()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">WorkspaceImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.html#getClickUp4j()" class="member-name-link">getClickUp4j()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a></dt>
 <dd>&nbsp;</dd>
@@ -195,9 +203,23 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html#getClickUp4j()" class="member-name-link">getClickUp4j()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/TaskList.html" title="interface in pw.chew.clickup4j.api.entities">TaskList</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/User.html#getClickUp4j()" class="member-name-link">getClickUp4j()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></dt>
+<dd>
+<div class="block">Returns this ClickUp4j instance.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/Workspace.html#getClickUp4j()" class="member-name-link">getClickUp4j()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities">Workspace</a></dt>
+<dd>
+<div class="block">Returns this ClickUp4j instance.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#getClickUp4j()" class="member-name-link">getClickUp4j()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/SpaceImpl.html#getClickUp4j()" class="member-name-link">getClickUp4j()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/SpaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">SpaceImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html#getClickUp4j()" class="member-name-link">getClickUp4j()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/UserImpl.html#getClickUp4j()" class="member-name-link">getClickUp4j()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/UserImpl.html" title="class in pw.chew.clickup4j.internal.entities">UserImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html#getClickUp4j()" class="member-name-link">getClickUp4j()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">WorkspaceImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/DropDownCustomField.DropDownOption.html#getColor()" class="member-name-link">getColor()</a> - Method in interface pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/DropDownCustomField.DropDownOption.html" title="interface in pw.chew.clickup4j.api.entities.customfields">DropDownCustomField.DropDownOption</a></dt>
 <dd>&nbsp;</dd>
@@ -208,10 +230,20 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.Status.html#getColor()" class="member-name-link">getColor()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.Status.html" title="interface in pw.chew.clickup4j.api.entities">Task.Status</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/User.html#getColor()" class="member-name-link">getColor()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The color for this user.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Workspace.html#getColor()" class="member-name-link">getColor()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities">Workspace</a></dt>
+<dd>
+<div class="block">The color for this workspace.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html#getColor()" class="member-name-link">getColor()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl.StatusImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html#getColor()" class="member-name-link">getColor()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl.StatusImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/UserImpl.html#getColor()" class="member-name-link">getColor()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/UserImpl.html" title="class in pw.chew.clickup4j.internal.entities">UserImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html#getColor()" class="member-name-link">getColor()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">WorkspaceImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/AutomaticProgressCustomField.html#getCompleteOn()" class="member-name-link">getCompleteOn()</a> - Method in interface pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/AutomaticProgressCustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">AutomaticProgressCustomField</a></dt>
 <dd>
@@ -226,7 +258,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Gets the count for the rating used for this Emoji.</div>
 </dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getCreator()" class="member-name-link">getCreator()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the user who created this task.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getCreator()" class="member-name-link">getCreator()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/CurrencyCustomField.html#getCurrencyType()" class="member-name-link">getCurrencyType()</a> - Method in interface pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/CurrencyCustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">CurrencyCustomField</a></dt>
@@ -239,6 +273,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.html#getCustomRole()" class="member-name-link">getCustomRole()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#getCustomRole()" class="member-name-link">getCustomRole()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getDateClosed()" class="member-name-link">getDateClosed()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getDateClosed()" class="member-name-link">getDateClosed()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
@@ -249,7 +285,11 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.html#getDateInvited()" class="member-name-link">getDateInvited()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#getDateInvited()" class="member-name-link">getDateInvited()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.html#getDateJoined()" class="member-name-link">getDateJoined()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#getDateJoined()" class="member-name-link">getDateJoined()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getDateUpdated()" class="member-name-link">getDateUpdated()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
 <dd>&nbsp;</dd>
@@ -262,11 +302,15 @@ loadScripts(document, 'script');</script>
 <div class="block">The default value of the custom field, if it has one.</div>
 </dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getDescription()" class="member-name-link">getDescription()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the complete description of this task.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getDescription()" class="member-name-link">getDescription()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getDueDate()" class="member-name-link">getDueDate()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the due date of this task, if there is one.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html#getDueDate()" class="member-name-link">getDueDate()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/TaskList.html" title="interface in pw.chew.clickup4j.api.entities">TaskList</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getDueDate()" class="member-name-link">getDueDate()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
@@ -274,6 +318,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html#getDueDate()" class="member-name-link">getDueDate()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.html#getEmail()" class="member-name-link">getEmail()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#getEmail()" class="member-name-link">getEmail()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/EmojiCustomField.html#getEmoji()" class="member-name-link">getEmoji()</a> - Method in interface pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/EmojiCustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">EmojiCustomField</a></dt>
 <dd>
@@ -310,16 +356,26 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html#getId()" class="member-name-link">getId()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/TaskList.html" title="interface in pw.chew.clickup4j.api.entities">TaskList</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/User.html#getId()" class="member-name-link">getId()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The unique ID of the user.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Workspace.html#getId()" class="member-name-link">getId()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities">Workspace</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The ID of the workspace.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/SpaceImpl.html#getId()" class="member-name-link">getId()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/SpaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">SpaceImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getId()" class="member-name-link">getId()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html#getId()" class="member-name-link">getId()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl.StatusImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html#getId()" class="member-name-link">getId()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html#getId()" class="member-name-link">getId()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl.StatusImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/UserImpl.html#getId()" class="member-name-link">getId()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/UserImpl.html" title="class in pw.chew.clickup4j.internal.entities">UserImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html#getId()" class="member-name-link">getId()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">WorkspaceImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html#getInboundAddress()" class="member-name-link">getInboundAddress()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/TaskList.html" title="interface in pw.chew.clickup4j.api.entities">TaskList</a></dt>
 <dd>&nbsp;</dd>
@@ -327,11 +383,21 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.html#getInitials()" class="member-name-link">getInitials()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#getInitials()" class="member-name-link">getInitials()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.html#getLastActive()" class="member-name-link">getLastActive()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#getLastActive()" class="member-name-link">getLastActive()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getListId()" class="member-name-link">getListId()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getListId()" class="member-name-link">getListId()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/Workspace.html#getMembers()" class="member-name-link">getMembers()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities">Workspace</a></dt>
+<dd>
+<div class="block">Returns a list of all the <a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities"><code>members</code></a> in this workspace.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html#getMembers()" class="member-name-link">getMembers()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">WorkspaceImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/requests/Route.html#getMethod()" class="member-name-link">getMethod()</a> - Method in class pw.chew.clickup4j.internal.requests.<a href="pw/chew/clickup4j/internal/requests/Route.html" title="class in pw.chew.clickup4j.internal.requests">Route</a></dt>
 <dd>&nbsp;</dd>
@@ -356,12 +422,16 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html#getName()" class="member-name-link">getName()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/TaskList.html" title="interface in pw.chew.clickup4j.api.entities">TaskList</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Workspace.html#getName()" class="member-name-link">getName()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities">Workspace</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The human-readable name of the <a href="pw/chew/clickup4j/api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities"><code>Workspace</code></a>.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/SpaceImpl.html#getName()" class="member-name-link">getName()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/SpaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">SpaceImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getName()" class="member-name-link">getName()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html#getName()" class="member-name-link">getName()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html#getName()" class="member-name-link">getName()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">WorkspaceImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/DropDownCustomField.html#getOptions()" class="member-name-link">getOptions()</a> - Method in interface pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/DropDownCustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">DropDownCustomField</a></dt>
 <dd>
@@ -376,6 +446,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html#getOrderIndex()" class="member-name-link">getOrderIndex()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/TaskList.html" title="interface in pw.chew.clickup4j.api.entities">TaskList</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getOrderIndex()" class="member-name-link">getOrderIndex()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html#getOrderIndex()" class="member-name-link">getOrderIndex()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl.StatusImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html#getOrderIndex()" class="member-name-link">getOrderIndex()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl</a></dt>
 <dd>&nbsp;</dd>
@@ -404,8 +476,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getPriority()" class="member-name-link">getPriority()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/User.html#getProfilePicture()" class="member-name-link">getProfilePicture()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></dt>
+<dd>
+<div class="block">Returns a link to this user's profile picture.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/UserImpl.html#getProfilePicture()" class="member-name-link">getProfilePicture()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/UserImpl.html" title="class in pw.chew.clickup4j.internal.entities">UserImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.html#getRole()" class="member-name-link">getRole()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#getRole()" class="member-name-link">getRole()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html#getSpace()" class="member-name-link">getSpace()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/TaskList.html" title="interface in pw.chew.clickup4j.api.entities">TaskList</a></dt>
 <dd>&nbsp;</dd>
@@ -416,7 +494,9 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getSpaceId()" class="member-name-link">getSpaceId()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getStartDate()" class="member-name-link">getStartDate()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the start date of this task, if there is one.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html#getStartDate()" class="member-name-link">getStartDate()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/TaskList.html" title="interface in pw.chew.clickup4j.api.entities">TaskList</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getStartDate()" class="member-name-link">getStartDate()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
@@ -428,10 +508,14 @@ loadScripts(document, 'script');</script>
 <div class="block">This is the minimum possible for the progress bar.</div>
 </dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getStatus()" class="member-name-link">getStatus()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the status of this task.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.Status.html#getStatus()" class="member-name-link">getStatus()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.Status.html" title="interface in pw.chew.clickup4j.api.entities">Task.Status</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getStatus()" class="member-name-link">getStatus()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html#getStatus()" class="member-name-link">getStatus()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl.StatusImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html#getStatus()" class="member-name-link">getStatus()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl.StatusImpl</a></dt>
 <dd>&nbsp;</dd>
@@ -450,7 +534,9 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html#getTaskCount()" class="member-name-link">getTaskCount()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getTextContent()" class="member-name-link">getTextContent()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the text content of this task.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getTextContent()" class="member-name-link">getTextContent()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/ICustomField.html#getTimeCreated()" class="member-name-link">getTimeCreated()</a> - Method in interface pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/ICustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">ICustomField</a></dt>
@@ -464,7 +550,9 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getTimeEstimate()" class="member-name-link">getTimeEstimate()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getTimeSpent()" class="member-name-link">getTimeSpent()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the time tracked to this task.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getTimeSpent()" class="member-name-link">getTimeSpent()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/ClickUp4j.html#getToken()" class="member-name-link">getToken()</a> - Method in interface pw.chew.clickup4j.api.<a href="pw/chew/clickup4j/api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></dt>
@@ -511,17 +599,27 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.Status.html#getType()" class="member-name-link">getType()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.Status.html" title="interface in pw.chew.clickup4j.api.entities">Task.Status</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html#getType()" class="member-name-link">getType()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl.StatusImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html#getType()" class="member-name-link">getType()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl.StatusImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getUrl()" class="member-name-link">getUrl()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The URL link to this task.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getUrl()" class="member-name-link">getUrl()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/requests/Route.html#getUrl()" class="member-name-link">getUrl()</a> - Method in class pw.chew.clickup4j.internal.requests.<a href="pw/chew/clickup4j/internal/requests/Route.html" title="class in pw.chew.clickup4j.internal.requests">Route</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.html#getUser()" class="member-name-link">getUser()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#getUser()" class="member-name-link">getUser()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/User.html#getUsername()" class="member-name-link">getUsername()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></dt>
+<dd>
+<div class="block">This user's username.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/UserImpl.html#getUsername()" class="member-name-link">getUsername()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/UserImpl.html" title="class in pw.chew.clickup4j.internal.entities">UserImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/AutomaticProgressCustomField.html#getValue()" class="member-name-link">getValue()</a> - Method in interface pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/AutomaticProgressCustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">AutomaticProgressCustomField</a></dt>
 <dd>
@@ -574,7 +672,9 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/UsersCustomField.html#getValue()" class="member-name-link">getValue()</a> - Method in interface pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/UsersCustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">UsersCustomField</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Task.html#getWatchers()" class="member-name-link">getWatchers()</a> - Method in interface pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the watchers for this task.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#getWatchers()" class="member-name-link">getWatchers()</a> - Method in class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -681,6 +781,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">A member is a simple wrapper for a User.</div>
 </dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a> - Class in <a href="pw/chew/clickup4j/internal/entities/package-summary.html">pw.chew.clickup4j.internal.entities</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/MemberImpl.html#%3Cinit%3E(org.json.JSONObject,pw.chew.clickup4j.api.ClickUp4j)" class="member-name-link">MemberImpl(JSONObject, ClickUp4j)</a> - Constructor for class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/MemberImpl.html" title="class in pw.chew.clickup4j.internal.entities">MemberImpl</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:N">N</h2>
 <dl class="index">
@@ -768,6 +872,12 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="pw/chew/clickup4j/internal/ClickUp4jImpl.html#retrieveTasks(java.lang.String)" class="member-name-link">retrieveTasks(String)</a> - Method in class pw.chew.clickup4j.internal.<a href="pw/chew/clickup4j/internal/ClickUp4jImpl.html" title="class in pw.chew.clickup4j.internal">ClickUp4jImpl</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/ClickUp4j.html#retrieveWorkspaces()" class="member-name-link">retrieveWorkspaces()</a> - Method in interface pw.chew.clickup4j.api.<a href="pw/chew/clickup4j/api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></dt>
+<dd>
+<div class="block">Retrieves a list of workspaces the currently authenticated user can access.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/ClickUp4jImpl.html#retrieveWorkspaces()" class="member-name-link">retrieveWorkspaces()</a> - Method in class pw.chew.clickup4j.internal.<a href="pw/chew/clickup4j/internal/ClickUp4jImpl.html" title="class in pw.chew.clickup4j.internal">ClickUp4jImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/requests/Route.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.requests">Route</a> - Class in <a href="pw/chew/clickup4j/internal/requests/package-summary.html">pw.chew.clickup4j.internal.requests</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/requests/Route.html#%3Cinit%3E(java.lang.String,java.lang.String)" class="member-name-link">Route(String, String)</a> - Constructor for class pw.chew.clickup4j.internal.requests.<a href="pw/chew/clickup4j/internal/requests/Route.html" title="class in pw.chew.clickup4j.internal.requests">Route</a></dt>
@@ -777,6 +887,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/internal/requests/Route.Space.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.requests">Route.Space</a> - Class in <a href="pw/chew/clickup4j/internal/requests/package-summary.html">pw.chew.clickup4j.internal.requests</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/requests/Route.Task.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.requests">Route.Task</a> - Class in <a href="pw/chew/clickup4j/internal/requests/package-summary.html">pw.chew.clickup4j.internal.requests</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/requests/Route.Workspace.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.requests">Route.Workspace</a> - Class in <a href="pw/chew/clickup4j/internal/requests/package-summary.html">pw.chew.clickup4j.internal.requests</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:S">S</h2>
@@ -813,6 +925,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/SpaceImpl.html#%3Cinit%3E(org.json.JSONObject,pw.chew.clickup4j.api.ClickUp4j)" class="member-name-link">SpaceImpl(JSONObject, ClickUp4j)</a> - Constructor for class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/SpaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">SpaceImpl</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html#%3Cinit%3E(org.json.JSONObject)" class="member-name-link">StatusImpl(JSONObject)</a> - Constructor for class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl.StatusImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html#%3Cinit%3E(org.json.JSONObject)" class="member-name-link">StatusImpl(JSONObject)</a> - Constructor for class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskListImpl.StatusImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskListImpl.StatusImpl</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -831,6 +945,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a> - Class in <a href="pw/chew/clickup4j/internal/entities/package-summary.html">pw.chew.clickup4j.internal.entities</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.html#%3Cinit%3E(org.json.JSONObject,pw.chew.clickup4j.api.ClickUp4j)" class="member-name-link">TaskImpl(JSONObject, ClickUp4j)</a> - Constructor for class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/TaskImpl.html" title="class in pw.chew.clickup4j.internal.entities">TaskImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/TaskImpl.StatusImpl.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.entities">TaskImpl.StatusImpl</a> - Class in <a href="pw/chew/clickup4j/internal/entities/package-summary.html">pw.chew.clickup4j.internal.entities</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/TaskList.html" class="type-name-link" title="interface in pw.chew.clickup4j.api.entities">TaskList</a> - Interface in <a href="pw/chew/clickup4j/api/entities/package-summary.html">pw.chew.clickup4j.api.entities</a></dt>
 <dd>&nbsp;</dd>
@@ -872,6 +988,12 @@ loadScripts(document, 'script');</script>
 <div class="block">URL Custom Field</div>
 </dd>
 <dt><a href="pw/chew/clickup4j/api/entities/User.html" class="type-name-link" title="interface in pw.chew.clickup4j.api.entities">User</a> - Interface in <a href="pw/chew/clickup4j/api/entities/package-summary.html">pw.chew.clickup4j.api.entities</a></dt>
+<dd>
+<div class="block">ClickUp User</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/UserImpl.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.entities">UserImpl</a> - Class in <a href="pw/chew/clickup4j/internal/entities/package-summary.html">pw.chew.clickup4j.internal.entities</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/UserImpl.html#%3Cinit%3E(org.json.JSONObject,pw.chew.clickup4j.api.ClickUp4j)" class="member-name-link">UserImpl(JSONObject, ClickUp4j)</a> - Constructor for class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/UserImpl.html" title="class in pw.chew.clickup4j.internal.entities">UserImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/customfields/CustomFieldType.html#USERS" class="member-name-link">USERS</a> - Enum constant in enum class pw.chew.clickup4j.api.entities.customfields.<a href="pw/chew/clickup4j/api/entities/customfields/CustomFieldType.html" title="enum class in pw.chew.clickup4j.api.entities.customfields">CustomFieldType</a></dt>
 <dd>
@@ -905,8 +1027,14 @@ the order they are declared.</div>
 <dl class="index">
 <dt><a href="pw/chew/clickup4j/api/entities/Workspace.html" class="type-name-link" title="interface in pw.chew.clickup4j.api.entities">Workspace</a> - Interface in <a href="pw/chew/clickup4j/api/entities/package-summary.html">pw.chew.clickup4j.api.entities</a></dt>
 <dd>
-<div class="block">A Workspace in ClickUp.</div>
+<div class="block">Workspace</div>
 </dd>
+<dt><a href="pw/chew/clickup4j/internal/requests/Route.Workspace.html#%3Cinit%3E()" class="member-name-link">Workspace()</a> - Constructor for class pw.chew.clickup4j.internal.requests.<a href="pw/chew/clickup4j/internal/requests/Route.Workspace.html" title="class in pw.chew.clickup4j.internal.requests">Route.Workspace</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.entities">WorkspaceImpl</a> - Class in <a href="pw/chew/clickup4j/internal/entities/package-summary.html">pw.chew.clickup4j.internal.entities</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html#%3Cinit%3E(org.json.JSONObject,pw.chew.clickup4j.api.ClickUp4j)" class="member-name-link">WorkspaceImpl(JSONObject, ClickUp4j)</a> - Constructor for class pw.chew.clickup4j.internal.entities.<a href="pw/chew/clickup4j/internal/entities/WorkspaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">WorkspaceImpl</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a></main>
 </div>

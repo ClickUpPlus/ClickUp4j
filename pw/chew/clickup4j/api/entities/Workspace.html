@@ -71,9 +71,15 @@ loadScripts(document, 'script');</script>
 <h1 title="Interface Workspace" class="title">Interface Workspace</h1>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>All Known Implementing Classes:</dt>
+<dd><code><a href="../../internal/entities/WorkspaceImpl.html" title="class in pw.chew.clickup4j.internal.entities">WorkspaceImpl</a></code></dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Workspace</span></div>
-<div class="block">A Workspace in ClickUp. This is the highest level of organization in ClickUp.</div>
+<div class="block"><h2>Workspace</h2>
+
+ This is the highest level of organization in ClickUp.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -88,18 +94,36 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAvatar()" class="member-name-link">getAvatar</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/Color.html" title="class or interface in java.awt" class="external-link">Color</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getColor()" class="member-name-link">getColor</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The avatar or icon for this workspace.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="../ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClickUp4j()" class="member-name-link">getClickUp4j</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns this ClickUp4j instance.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/Color.html" title="class or interface in java.awt" class="external-link">Color</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getColor()" class="member-name-link">getColor</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The color for this workspace.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The ID of the workspace.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMembers()" class="member-name-link">getMembers</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns a list of all the <a href="Member.html" title="interface in pw.chew.clickup4j.api.entities"><code>members</code></a> in this workspace.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The human-readable name of the <a href="Workspace.html" title="interface in pw.chew.clickup4j.api.entities"><code>Workspace</code></a>.</div>
+</div>
 </div>
 </div>
 </div>
@@ -117,25 +141,74 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="block">The ID of the workspace.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The ID of the workspace.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
+<div class="block">The human-readable name of the <a href="Workspace.html" title="interface in pw.chew.clickup4j.api.entities"><code>Workspace</code></a>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Never-null String containing the workspace's name.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getColor()">
 <h3>getColor</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/Color.html" title="class or interface in java.awt" class="external-link">Color</a></span>&nbsp;<span class="element-name">getColor</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/Color.html" title="class or interface in java.awt" class="external-link">Color</a></span>&nbsp;<span class="element-name">getColor</span>()</div>
+<div class="block">The color for this workspace.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Never-null Color object containing the workspace's color.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getAvatar()">
 <h3>getAvatar</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAvatar</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type">@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAvatar</span>()</div>
+<div class="block">The avatar or icon for this workspace.
+ <p>If the workspace does not have an avatar, this will be null.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Nullable String containing the workspace's avatar.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMembers()">
+<h3>getMembers</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Member.html" title="interface in pw.chew.clickup4j.api.entities">Member</a>&gt;</span>&nbsp;<span class="element-name">getMembers</span>()</div>
+<div class="block">Returns a list of all the <a href="Member.html" title="interface in pw.chew.clickup4j.api.entities"><code>members</code></a> in this workspace.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Never-null List of <a href="Member.html" title="interface in pw.chew.clickup4j.api.entities"><code>members</code></a> in this workspace.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getClickUp4j()">
+<h3>getClickUp4j</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="../ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></span>&nbsp;<span class="element-name">getClickUp4j</span>()</div>
+<div class="block">Returns this ClickUp4j instance.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Never-null ClickUp4j instance.</dd>
+</dl>
 </section>
 </li>
 </ul>
