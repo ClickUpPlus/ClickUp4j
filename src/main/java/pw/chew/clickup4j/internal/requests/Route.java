@@ -18,10 +18,13 @@ package pw.chew.clickup4j.internal.requests;
 
 import okhttp3.Request;
 
-import java.sql.RowId;
 import java.util.Arrays;
 
 public class Route {
+    public static class Authorization {
+        public static final Route GET_USER = new Route("GET", "/user");
+    }
+
     public static class List {
         public static final Route GET_TASKS = new Route("GET", "/list/:list_id/task");
     }

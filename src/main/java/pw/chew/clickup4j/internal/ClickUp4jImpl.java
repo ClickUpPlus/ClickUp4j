@@ -23,9 +23,11 @@ import org.json.JSONObject;
 import pw.chew.clickup4j.api.ClickUp4j;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
+import pw.chew.clickup4j.api.entities.User;
 import pw.chew.clickup4j.api.entities.Workspace;
 import pw.chew.clickup4j.internal.entities.SpaceImpl;
 import pw.chew.clickup4j.internal.entities.TaskImpl;
+import pw.chew.clickup4j.internal.entities.UserImpl;
 import pw.chew.clickup4j.internal.entities.WorkspaceImpl;
 import pw.chew.clickup4j.internal.requests.Requester;
 import pw.chew.clickup4j.internal.requests.Route;
@@ -121,6 +123,17 @@ public class ClickUp4jImpl implements ClickUp4j {
             .toList().stream()
             .map(jsonObject -> new WorkspaceImpl((JSONObject) jsonObject, this))
             .collect(Collectors.toList());
+
+        return new Requester<>(client, request, mapper);
+    }
+
+    @Override
+    public Requester<User> retrieveSelfUser() {
+        Request request = Route.Authorization.GET_USER.build()
+            .addHeader("Authorization", token)
+            .build();
+
+        Function<String, User> mapper = response -> new UserImpl(new JSONObject(response), this);
 
         return new Requester<>(client, request, mapper);
     }

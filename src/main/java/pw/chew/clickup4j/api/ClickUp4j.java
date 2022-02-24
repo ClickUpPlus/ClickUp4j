@@ -19,6 +19,7 @@ import okhttp3.OkHttpClient;
 import org.jetbrains.annotations.NotNull;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
+import pw.chew.clickup4j.api.entities.User;
 import pw.chew.clickup4j.api.entities.Workspace;
 import pw.chew.clickup4j.internal.requests.Requester;
 
@@ -74,4 +75,12 @@ public interface ClickUp4j {
      * @return the list of workspaces
      */
     Requester<List<Workspace>> retrieveWorkspaces();
+
+    /**
+     * Retrieves the currently logged-in User.
+     * <br>The user is workspace agnostic.
+     *
+     * @return the user
+     */
+    Requester<User> retrieveSelfUser();
 }
