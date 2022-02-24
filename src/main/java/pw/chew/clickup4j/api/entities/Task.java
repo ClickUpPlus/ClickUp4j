@@ -84,13 +84,38 @@ public interface Task {
     @NotNull
     Status getStatus();
 
-
+    /**
+     * Returns the order index of this task.
+     * <br>The higher the index, the lower (vertically) the task will be.
+     *
+     * @return the order index of this task
+     */
     String getOrderIndex();
 
+    /**
+     * Returns when this Task was created.
+     * <br>If this task was imported, it may show up as a date prior to ClickUp's creation date. Pretty neat!
+     *
+     * @return the date this task was created
+     */
+    @NotNull
     OffsetDateTime getDateCreated();
 
+    /**
+     * Returns when this Task was last modified.
+     *
+     * @return the date this task was last modified
+     */
+    @NotNull
     OffsetDateTime getDateUpdated();
 
+    /**
+     * Returns when this Task was closed.
+     * <br>If the task is not closed, this will be null.
+     *
+     * @return the date this task was closed, or null if it is not closed
+     */
+    @Nullable
     OffsetDateTime getDateClosed();
 
     /**
@@ -215,6 +240,8 @@ public interface Task {
     /**
      * Uploads the specified {@link File} to this task.
      *
+     * @param file the file to upload
+     * @param filename the name of the file
      * @return a requester to upload an attachment to this task
      */
     Requester<Attachment> uploadAttachment(File file, String filename);
@@ -284,7 +311,7 @@ public interface Task {
 
         /**
          * Returns the color of this priority as displayed in the UI.
-         * <br><b>This will be {@link null} for {@link #NONE}</b>
+         * <br><b>This will be {@code null} for {@link #NONE}</b>
          *
          * @return the color of this priority
          */

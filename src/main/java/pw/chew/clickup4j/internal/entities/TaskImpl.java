@@ -91,13 +91,13 @@ public class TaskImpl implements Task {
     }
 
     @Override
-    public OffsetDateTime getDateCreated() {
+    public @NotNull OffsetDateTime getDateCreated() {
         String date = data.getString("date_created");
         return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
 
     @Override
-    public OffsetDateTime getDateUpdated() {
+    public @NotNull OffsetDateTime getDateUpdated() {
         String date = data.getString("date_updated");
         return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
