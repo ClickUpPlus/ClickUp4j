@@ -1,8 +1,201 @@
 # ClickUp 4 Java
 
-ClickUp4j attempts to be a complete, full wrapper for the ClickUp REST API in Java.
+ClickUp4j aims to be a complete, full wrapper for the ClickUp REST API in Java.
 
 **This project is in active development and is not yet complete. If you intend to use this, be cautious things may change!**
+
+## Features
+
+The list is based on the [ClickUp API documentation](https://clickup.com/docs/api/).
+
+Main Features:
+- [x] Reading the API (tasks, workspaces, views)
+- [ ] Modifying/Creating [In Progress!]
+- [ ] Time Tracking
+- [ ] Webhooks
+
+<details>
+<summary>
+Full Breakdown
+</summary>
+
+- Attachments
+  - [x] Upload Attachments (`Task#uploadAttachment`)
+- Authorization
+  - [ ] Get Access Token
+  - [x] Get Authorized User (`ClickUp4j#retrieveSelfUser`)
+  - [x] Get Authorized Teams (`ClickUp4j#retrieveWorkspaces`)
+- Checklists
+  - [ ] Create Checklist
+  - [ ] Edit Checklist
+  - [ ] Delete Checklist
+  - [ ] Create Checklist Item
+  - [ ] Edit Checklist Item
+  - [ ] Delete Checklist Item
+- Comment
+  - [ ] Create Task Comment
+  - [ ] Create Chat View Comment
+  - [ ] Create List Comment
+  - [ ] Get Task Comments
+  - [ ] Get Chat View Comments
+  - [ ] Get List Comments
+  - [ ] Update Comment
+  - [ ] Delete Comment
+- Custom Fields
+  - Routes:
+    - [ ] Get Accessible Custom Fields
+    - [ ] Set Custom Field Value
+    - [ ] Remove Custom Field Value
+  - Fields:
+    - [x] URL
+    - [x] Dropdown
+    - [x] Email
+    - [x] Phone
+    - [x] Date
+    - [x] Text
+    - [x] Checkbox
+    - [x] Number
+    - [x] Currency
+    - [x] Tasks
+    - [x] Users
+    - [x] Rating/Emoji
+    - [x] Labels
+    - [x] Automatic Progress
+    - [x] Manual Progress
+    - [x] Short Text
+    - [ ] File
+    - [ ] Formula
+- Dependencies
+  - [ ] Add Dependency
+  - [ ] Delete Dependency
+  - [ ] Add Task Link
+  - [ ] Delete Task Link
+- Folders
+  - [ ] Create Folder
+  - [ ] Update Folder
+  - [ ] Delete Folder
+  - [ ] Get Folders
+  - [ ] Get Folder
+- Goals
+  - [ ] Create Goal
+  - [ ] Update Goal
+  - [ ] Delete Goal
+  - [ ] Get Goals
+  - [ ] Get Goal
+  - [ ] Create Key Result
+  - [ ] Edit Key Result
+  - [ ] Delete Key Result
+- Lists
+  - [ ] Create List
+  - [ ] Create Folderless List
+  - [ ] Update List
+  - [ ] Delete List
+  - [ ] Get Lists
+  - [ ] Get Folderless Lists
+  - [ ] Get List
+  - [ ] Add Task To List
+  - [ ] Remove Task From List
+- Members
+  - [ ] Get Task Members
+  - [ ] Get List Members
+- Shared Hierarchy
+  - [ ] Get Shared Hierarchy
+- Spaces
+  - [ ] Create Space
+  - [ ] Update Space
+  - [ ] Delete Space
+  - [ ] Get Spaces
+  - [x] Get Space (`ClickUp4j#retrieveSpace(String)`)
+- Tags
+  - [ ] Get Space Tags
+  - [ ] Create Space Tag
+  - [ ] Edit Space Tag
+  - [ ] Delete Space Tag
+  - [ ] Add Tag To Task
+  - [ ] Remove Tag From Task
+- Tasks
+  - [ ] Create Task
+  - [ ] Update Task
+  - [ ] Delete Task
+  - [x] Get Tasks (`ClickUp4j#retrieveTasks(String)`)
+  - [x] Get Task (`ClickUp4j#retrieveTask`)
+  - [ ] Get Filtered Team Tasks
+  - [ ] Get Task's Time in Status
+  - [ ] Get Bulk Tasks' Time in Status
+- Task Templates
+  - [ ] Get Task Template
+  - [ ] Create Task From Template
+- Teams
+  - [ ] Create Team
+  - [ ] Update Team
+  - [ ] Delete Team
+  - [ ] Get Teams
+- Time Tracking
+  - [ ] Get time entries within a date range
+  - [ ] Get singular time entry
+  - [ ] Get time entry history
+  - [ ] Get running time entry
+  - [ ] Create a time entry
+  - [ ] Remove tags from time entries
+  - [ ] Get all tags from time entries
+  - [ ] Add tags from time entries
+  - [ ] Change tag names from time entries
+  - [ ] Start a time Entry
+  - [ ] Stop a time Entry
+  - [ ] Delete a time Entry
+  - [ ] Update a time Entry
+- Views
+  - [ ] Create Team View
+  - [ ] Create Space View
+  - [ ] Create Folder View
+  - [ ] Create List View
+  - [ ] Get Team Views
+  - [ ] Get Space Views
+  - [ ] Get Folder Views
+  - [ ] Get List Views
+  - [ ] Get View
+  - [ ] Get View Tasks
+  - [ ] Update View
+  - [ ] Delete View
+- Workspace
+  - [x] Get Workspaces (`ClickUp4j#retrieveWorkspaces`)
+- Webhooks
+  - Events
+    - [ ] taskCreated
+    - [ ] taskUpdated
+    - [ ] taskDeleted
+    - [ ] taskPriorityUpdated
+    - [ ] taskStatusUpdated
+    - [ ] taskAssigneeUpdated
+    - [ ] taskDueDateUpdated
+    - [ ] taskTagUpdated
+    - [ ] taskMoved
+    - [ ] taskCommentPosted
+    - [ ] taskCommentUpdated
+    - [ ] taskTimeEstimateUpdated
+    - [ ] taskTimeTrackedUpdated
+    - [ ] listCreated
+    - [ ] listUpdated
+    - [ ] listDeleted
+    - [ ] folderCreated
+    - [ ] folderUpdated
+    - [ ] folderDeleted
+    - [ ] spaceCreated
+    - [ ] spaceUpdated
+    - [ ] spaceDeleted
+    - [ ] goalCreated
+    - [ ] goalUpdated
+    - [ ] goalDeleted
+    - [ ] keyResultCreated
+    - [ ] keyResultUpdated
+    - [ ] keyResultDeleted
+  - Routes
+    - [ ] Create Webhook
+    - [ ] Update Webhook
+    - [ ] Delete Webhook
+    - [ ] Get Webhooks
+
+</details>
 
 ## Creating the ClickUp4j Object
 
