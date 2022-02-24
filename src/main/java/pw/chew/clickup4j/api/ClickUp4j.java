@@ -15,6 +15,7 @@
  */
 package pw.chew.clickup4j.api;
 
+import okhttp3.OkHttpClient;
 import org.jetbrains.annotations.NotNull;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
@@ -33,6 +34,13 @@ public interface ClickUp4j {
      * @return the token
      */
     String getToken();
+
+    /**
+     * Returns the OkHttpClient used for requests.
+     *
+     * @return the OkHttpClient
+     */
+    OkHttpClient getHttpClient();
 
     /**
      * Returns a list of tasks in a specified list ID.

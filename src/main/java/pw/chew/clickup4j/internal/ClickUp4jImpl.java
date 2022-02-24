@@ -50,6 +50,11 @@ public class ClickUp4jImpl implements ClickUp4j {
     }
 
     @Override
+    public OkHttpClient getHttpClient() {
+        return client;
+    }
+
+    @Override
     public Requester<List<Task>> retrieveTasks(@NotNull String listId) {
         Request request = Route.List.GET_TASKS.build(listId)
             .addHeader("Authorization", token)

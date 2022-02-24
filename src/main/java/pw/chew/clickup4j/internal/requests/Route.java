@@ -18,6 +18,7 @@ package pw.chew.clickup4j.internal.requests;
 
 import okhttp3.Request;
 
+import java.sql.RowId;
 import java.util.Arrays;
 
 public class Route {
@@ -27,6 +28,7 @@ public class Route {
 
     public static class Task {
         public static final Route GET_TASK = new Route("GET", "/task/:task_id");
+        public static final Route UPLOAD_ATTACHMENT = new Route("POST", "/task/:task_id/attachment");
     }
 
     public static class Space {

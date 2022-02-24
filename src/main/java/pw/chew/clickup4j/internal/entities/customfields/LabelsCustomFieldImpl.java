@@ -54,7 +54,7 @@ public class LabelsCustomFieldImpl extends CustomFieldImpl implements LabelsCust
         }
 
         public LabelImpl(Object data) {
-            this.labelData = (JSONObject) data;
+            this.labelData = new JSONObject(data);
         }
 
         @Override

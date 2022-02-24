@@ -16,10 +16,15 @@
 
 package pw.chew.clickup4j.internal.entities;
 
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.Request;
+import okhttp3.RequestBody;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
 import pw.chew.clickup4j.api.ClickUp4j;
+import pw.chew.clickup4j.api.entities.Attachment;
 import pw.chew.clickup4j.api.entities.Checklist;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
@@ -27,13 +32,18 @@ import pw.chew.clickup4j.api.entities.User;
 import pw.chew.clickup4j.api.entities.customfields.ICustomField;
 import pw.chew.clickup4j.internal.entities.customfields.CustomFieldImpl;
 import pw.chew.clickup4j.internal.requests.Requester;
+import pw.chew.clickup4j.internal.requests.Route;
 
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class TaskImpl implements Task {
@@ -207,6 +217,22 @@ public class TaskImpl implements Task {
     @Override
     public Requester<Space> retrieveSpace() {
         return api.retrieveSpace(getSpaceId());
+    }
+
+    @Override
+    public Requester<Attachment> uploadAttachment(File file, String filename) {
+        RequestBody body = new MultipartBody.Builder().setType(MultipartBody.FORM)
+            .addFormDataPart("attachment", filename,
+                RequestBody.create(file, MediaType.parse("application/octet-stream")))
+            .addFormDataPart("filename", filename)
+            .build();
+
+        Request.Builder builder = Route.Task.UPLOAD_ATTACHMENT.build(getId())
+            .post(body);
+
+        Function<String, Attachment> mapper = (String response) -> new AttachmentImpl(new JSONObject(response), api);
+
+        return new Requester<>(api.getHttpClient(), builder.build(), mapper);
     }
 
     @Override

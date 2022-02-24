@@ -21,6 +21,7 @@ import pw.chew.clickup4j.api.entities.customfields.ICustomField;
 import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.awt.Color;
+import java.io.File;
 import java.time.Duration;
 import java.time.OffsetDateTime;
 import java.util.List;
@@ -210,6 +211,13 @@ public interface Task {
     String getSpaceId();
 
     Requester<Space> retrieveSpace();
+
+    /**
+     * Uploads the specified {@link File} to this task.
+     *
+     * @return a requester to upload an attachment to this task
+     */
+    Requester<Attachment> uploadAttachment(File file, String filename);
 
     /**
      * The URL link to this task.
