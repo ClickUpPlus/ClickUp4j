@@ -15,6 +15,8 @@
  */
 package pw.chew.clickup4j.api.entities.customfields;
 
+import pw.chew.clickup4j.api.ClickUp4j;
+
 import java.time.OffsetDateTime;
 
 /**
@@ -73,4 +75,11 @@ public interface ICustomField {
      * @return if this is a required custom field.
      */
     boolean isRequired();
+
+    /**
+     * Returns this {@link ClickUp4j} instance.
+     *
+     * @return this {@link ClickUp4j} instance
+     */
+    ClickUp4j getClickUp4j();
 }

@@ -17,6 +17,7 @@ package pw.chew.clickup4j.api.entities;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import pw.chew.clickup4j.api.entities.customfields.ICustomField;
 import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.awt.Color;
@@ -129,11 +130,32 @@ public interface Task {
 
     // TODO: Tags
 
-    // TODO: Confirm return type
-    Task getParent();
+    /**
+     * Retrieves the parent ID of this task.
+     * <p>This will be null if this task is a top-level task.
+     * <br>
+     * To get the parent task, use {@link Task#retrieveParent()}.
+     *
+     * @return the parent ID of this task
+     */
+    @Nullable
+    String getParentId();
 
-    // TODO: Make this an enum
-    int getPriority();
+    /**
+     * Retrieves the parent task of this task.
+     * <p>This will be null if this task is a top-level task.
+     *
+     * @return a requester to get the parent task
+     */
+    Requester<Task> retrieveParent();
+
+    /**
+     * The priority of this task. If there is no priority set, this will return {@link Priority#NONE}.
+     *
+     * @return the never-null priority of this task
+     */
+    @NotNull
+    Priority getPriority();
 
     /**
      * Returns the due date of this task, if there is one.
@@ -168,7 +190,14 @@ public interface Task {
      */
     Duration getTimeSpent();
 
-    // TODO: Custom Fields
+    /**
+     * Returns all the custom fields for this task.
+     * <br>Custom Fields may not have a value set.
+     *
+     * @return all the custom fields for this task
+     */
+    @NotNull
+    List<ICustomField> getCustomFields();
 
     String getListId();
 
@@ -211,5 +240,57 @@ public interface Task {
         int getOrderIndex();
 
         String getType();
+    }
+
+    /**
+     * Represents the priority of a task.
+     */
+    enum Priority {
+        URGENT(1, "#f50000", "Urgent"),
+        HIGH(2, "#ffcc00", "High"),
+        NORMAL(3, "#6fddff", "Normal"),
+        LOW(4, "#d8d8d8", "Low"),
+        NONE(0, null, "None"),
+        UNKNOWN(-1, null, "Unknown"),
+        ;
+
+        private final int priority;
+        private final String color;
+        private final String name;
+
+        Priority(int priority, String color, String name) {
+            this.priority = priority;
+            this.color = color;
+            this.name = name;
+        }
+
+        /**
+         * Returns the int representation of this priority.
+         * <br>The order index, if needed, is the same as the int representation.
+         *
+         * @return the int representation of this priority
+         */
+        public int getPriority() {
+            return priority;
+        }
+
+        /**
+         * Returns the color of this priority as displayed in the UI.
+         * <br><b>This will be {@link null} for {@link #NONE}</b>
+         *
+         * @return the color of this priority
+         */
+        public Color getColor() {
+            return Color.decode(color);
+        }
+
+        /**
+         * The name of this priority.
+         *
+         * @return the name of this priority
+         */
+        public String getName() {
+            return name;
+        }
     }
 }

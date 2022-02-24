@@ -33,7 +33,7 @@ public interface ManualProgressCustomField extends ICustomField {
      *
      * @return The percent completed.
      */
-    float getPercentCompleted();
+    Float getPercentCompleted();
 
     /**
      * This is the minimum possible for the progress bar.

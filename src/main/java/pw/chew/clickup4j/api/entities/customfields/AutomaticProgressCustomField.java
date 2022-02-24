@@ -54,7 +54,9 @@ public interface AutomaticProgressCustomField extends ICustomField {
     enum CompleteOn {
         DISPLAY_0_COMPLETED("Display 0% completed", 1),
         DISPLAY_100_COMPLETED("Display 100% completed", 2),
-        DISPLAY_100_WHEN_CLOSED("Display 100% when task is in a done status", 3);
+        DISPLAY_100_WHEN_CLOSED("Display 100% when task is in a done status", 3),
+        UNKNOWN("Unknown", -1),
+        ;
 
         private final String value;
         private final int internalValue;

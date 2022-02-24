@@ -24,6 +24,8 @@ import pw.chew.clickup4j.api.entities.Checklist;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.api.entities.User;
+import pw.chew.clickup4j.api.entities.customfields.ICustomField;
+import pw.chew.clickup4j.internal.entities.customfields.CustomFieldImpl;
 import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.awt.Color;
@@ -117,17 +119,34 @@ public class TaskImpl implements Task {
 
     @Override
     public @NotNull List<Checklist> getChecklists() {
-        return data.getJSONArray("checlists").toList().stream().map(o -> new ChecklistImpl((JSONObject) o, api)).collect(Collectors.toList());
+        return data.getJSONArray("checklists").toList().stream().map(o -> new ChecklistImpl((JSONObject) o, api)).collect(Collectors.toList());
     }
 
     @Override
-    public Task getParent() {
-        return null;
+    @Nullable
+    public String getParentId() {
+        return data.optString("parent");
     }
 
     @Override
-    public int getPriority() {
-        return 0;
+    public Requester<Task> retrieveParent() {
+        return getParentId() == null ? null : api.retrieveTask(getParentId());
+    }
+
+    @Override
+    @NotNull
+    public Priority getPriority() {
+        if (data.isNull("priority")) return Priority.NONE;
+
+        String priorityString = data.getJSONObject("priority").getString("id");
+        int priority = Integer.parseInt(priorityString);
+
+        for (Priority p : Priority.values()) {
+            if (p.getPriority() == priority) {
+                return p;
+            }
+        }
+        return Priority.UNKNOWN;
     }
 
     @Override
@@ -161,18 +180,28 @@ public class TaskImpl implements Task {
     }
 
     @Override
+    public @NotNull List<ICustomField> getCustomFields() {
+        return data.getJSONArray("custom_fields").toList().stream()
+            .map(o -> {
+                JSONObject field = (JSONObject) o;
+                return new CustomFieldImpl(field, api);
+            })
+            .collect(Collectors.toList());
+    }
+
+    @Override
     public String getListId() {
-        return null;
+        return data.getJSONObject("list").getString("id");
     }
 
     @Override
     public String getFolderId() {
-        return null;
+        return data.getJSONObject("folder").getString("id");
     }
 
     @Override
     public String getSpaceId() {
-        return null;
+        return data.getJSONObject("space").getString("id");
     }
 
     @Override

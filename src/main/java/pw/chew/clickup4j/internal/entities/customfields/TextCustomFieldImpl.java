@@ -13,28 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package pw.chew.clickup4j.api.entities.customfields;
 
-public interface EmojiCustomField extends ICustomField {
-    @Override
-    Integer getValue();
+package pw.chew.clickup4j.internal.entities.customfields;
 
-    /**
-     * The emoji value associated with this custom field. E.g. \uD83D\uDE0E
-     *
-     * @return a string value of the unicode representation of the emoji
-     */
-    String getEmoji();
+import org.json.JSONObject;
+import pw.chew.clickup4j.api.ClickUp4j;
+import pw.chew.clickup4j.api.entities.customfields.TextCustomField;
 
-    /**
-     * Gets the count for the rating used for this Emoji. Must be between 1-5.
-     *
-     * @return an int value of 1-5
-     */
-    int getCount();
+public class TextCustomFieldImpl extends CustomFieldImpl implements TextCustomField {
+    public TextCustomFieldImpl(JSONObject data, ClickUp4j api) {
+        super(data, api);
+    }
 
     @Override
-    default CustomFieldType getType() {
-        return CustomFieldType.EMOJI;
+    public String getValue() {
+        return getData().optString("value");
     }
 }

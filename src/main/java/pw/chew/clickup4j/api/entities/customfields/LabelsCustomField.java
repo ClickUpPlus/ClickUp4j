@@ -36,6 +36,14 @@ public interface LabelsCustomField extends ICustomField {
     @NotNull
     List<Label> getValue();
 
+    /**
+     * Returns all possible labels for this task.
+     *
+     * @return a list of labels.
+     */
+    @NotNull
+    List<Label> getLabels();
+
     @Override
     default CustomFieldType getType() {
         return CustomFieldType.LABELS;
