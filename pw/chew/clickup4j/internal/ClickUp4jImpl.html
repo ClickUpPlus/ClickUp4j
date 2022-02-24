@@ -110,10 +110,20 @@ implements <a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getToken()" class="member-name-link">getToken</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>okhttp3.OkHttpClient</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHttpClient()" class="member-name-link">getHttpClient</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the OkHttpClient used for requests.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getToken()" class="member-name-link">getToken</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Gets the token currently being used for requests.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="../api/entities/User.html" title="interface in pw.chew.clickup4j.api.entities">User</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retrieveSelfUser()" class="member-name-link">retrieveSelfUser</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the currently logged-in User.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="../api/entities/Space.html" title="interface in pw.chew.clickup4j.api.entities">Space</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retrieveSpace(java.lang.String)" class="member-name-link">retrieveSpace</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;spaceId)</code></div>
@@ -182,6 +192,20 @@ implements <a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j
 </section>
 </li>
 <li>
+<section class="detail" id="getHttpClient()">
+<h3>getHttpClient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">okhttp3.OkHttpClient</span>&nbsp;<span class="element-name">getHttpClient</span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../api/ClickUp4j.html#getHttpClient()">ClickUp4j</a></code></span></div>
+<div class="block">Returns the OkHttpClient used for requests.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../api/ClickUp4j.html#getHttpClient()">getHttpClient</a></code>&nbsp;in interface&nbsp;<code><a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></dd>
+<dt>Returns:</dt>
+<dd>the OkHttpClient</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="retrieveTasks(java.lang.String)">
 <h3>retrieveTasks</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../api/entities/Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a>&gt;&gt;</span>&nbsp;<span class="element-name">retrieveTasks</span><wbr><span class="parameters">(@NotNull
@@ -245,6 +269,21 @@ implements <a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j
 <dd><code><a href="../api/ClickUp4j.html#retrieveWorkspaces()">retrieveWorkspaces</a></code>&nbsp;in interface&nbsp;<code><a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></dd>
 <dt>Returns:</dt>
 <dd>the list of workspaces</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="retrieveSelfUser()">
+<h3>retrieveSelfUser</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="../api/entities/User.html" title="interface in pw.chew.clickup4j.api.entities">User</a>&gt;</span>&nbsp;<span class="element-name">retrieveSelfUser</span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../api/ClickUp4j.html#retrieveSelfUser()">ClickUp4j</a></code></span></div>
+<div class="block">Retrieves the currently logged-in User.
+ <br>The user is workspace agnostic.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../api/ClickUp4j.html#retrieveSelfUser()">retrieveSelfUser</a></code>&nbsp;in interface&nbsp;<code><a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></dd>
+<dt>Returns:</dt>
+<dd>the user</dd>
 </dl>
 </section>
 </li>

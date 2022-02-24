@@ -93,9 +93,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Interface</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="Task.Status.html" class="type-name-link" title="interface in pw.chew.clickup4j.api.entities">Task.Status</a></code></div>
+<div class="col-first even-row-color"><code>static enum&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="Task.Priority.html" class="type-name-link" title="enum class in pw.chew.clickup4j.api.entities">Task.Priority</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Represents the priority of a task.</div>
+</div>
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="Task.Status.html" class="type-name-link" title="interface in pw.chew.clickup4j.api.entities">Task.Status</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Represents a status of a task.</div>
 </div>
 </div>
@@ -117,25 +122,41 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns a list of <a href="User.html" title="interface in pw.chew.clickup4j.api.entities"><code>users</code></a> who are assigned to work on this task.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCreator()" class="member-name-link">getCreator</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Checklist.html" title="interface in pw.chew.clickup4j.api.entities">Checklist</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChecklists()" class="member-name-link">getChecklists</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns a list of checklists associated with this task.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCreator()" class="member-name-link">getCreator</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the user who created this task.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="customfields/ICustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">ICustomField</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomFields()" class="member-name-link">getCustomFields</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns all the custom fields for this task.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomId()" class="member-name-link">getCustomId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The custom ID for this task.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDateClosed()" class="member-name-link">getDateClosed</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns when this Task was closed.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDateCreated()" class="member-name-link">getDateCreated</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns when this Task was created.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDateUpdated()" class="member-name-link">getDateUpdated</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns when this Task was last modified.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDescription()" class="member-name-link">getDescription</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -164,13 +185,19 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrderIndex()" class="member-name-link">getOrderIndex</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParent()" class="member-name-link">getParent</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the order index of this task.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParentId()" class="member-name-link">getParentId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves the parent ID of this task.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="Task.Priority.html" title="enum class in pw.chew.clickup4j.api.entities">Task.Priority</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPriority()" class="member-name-link">getPriority</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The priority of this task.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSpaceId()" class="member-name-link">getSpaceId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
@@ -214,9 +241,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Resolves missing fields in this task.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="Space.html" title="interface in pw.chew.clickup4j.api.entities">Space</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#retrieveSpace()" class="member-name-link">retrieveSpace</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#retrieveParent()" class="member-name-link">retrieveParent</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves the parent task of this task.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="Space.html" title="interface in pw.chew.clickup4j.api.entities">Space</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#retrieveSpace()" class="member-name-link">retrieveSpace</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="Attachment.html" title="interface in pw.chew.clickup4j.api.entities">Attachment</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#uploadAttachment(java.io.File,java.lang.String)" class="member-name-link">uploadAttachment</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&nbsp;file,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;filename)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Uploads the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/File.html" title="class or interface in java.io" class="external-link"><code>File</code></a> to this task.</div>
+</div>
 </div>
 </div>
 </div>
@@ -315,24 +353,50 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getOrderIndex()">
 <h3>getOrderIndex</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getOrderIndex</span>()</div>
+<div class="block">Returns the order index of this task.
+ <br>The higher the index, the lower (vertically) the task will be.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the order index of this task</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDateCreated()">
 <h3>getDateCreated</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateCreated</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateCreated</span>()</div>
+<div class="block">Returns when this Task was created.
+ <br>If this task was imported, it may show up as a date prior to ClickUp's creation date. Pretty neat!</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the date this task was created</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDateUpdated()">
 <h3>getDateUpdated</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateUpdated</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateUpdated</span>()</div>
+<div class="block">Returns when this Task was last modified.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the date this task was last modified</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDateClosed()">
 <h3>getDateClosed</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateClosed</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type">@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateClosed</span>()</div>
+<div class="block">Returns when this Task was closed.
+ <br>If the task is not closed, this will be null.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the date this task was closed, or null if it is not closed</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -375,15 +439,55 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getParent()">
-<h3>getParent</h3>
-<div class="member-signature"><span class="return-type"><a href="Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a></span>&nbsp;<span class="element-name">getParent</span>()</div>
+<section class="detail" id="getChecklists()">
+<h3>getChecklists</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Checklist.html" title="interface in pw.chew.clickup4j.api.entities">Checklist</a>&gt;</span>&nbsp;<span class="element-name">getChecklists</span>()</div>
+<div class="block">Returns a list of checklists associated with this task.
+ <br>This list will be empty if this task has no checklists.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a list of checklists associated with this task</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getParentId()">
+<h3>getParentId</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type">@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getParentId</span>()</div>
+<div class="block">Retrieves the parent ID of this task.
+ <p>This will be null if this task is a top-level task.
+ <br>
+ To get the parent task, use <a href="#retrieveParent()"><code>retrieveParent()</code></a>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the parent ID of this task</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="retrieveParent()">
+<h3>retrieveParent</h3>
+<div class="member-signature"><span class="return-type"><a href="../../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="Task.html" title="interface in pw.chew.clickup4j.api.entities">Task</a>&gt;</span>&nbsp;<span class="element-name">retrieveParent</span>()</div>
+<div class="block">Retrieves the parent task of this task.
+ <p>This will be null if this task is a top-level task.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a requester to get the parent task</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getPriority()">
 <h3>getPriority</h3>
-<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getPriority</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="Task.Priority.html" title="enum class in pw.chew.clickup4j.api.entities">Task.Priority</a></span>&nbsp;<span class="element-name">getPriority</span>()</div>
+<div class="block">The priority of this task. If there is no priority set, this will return <a href="Task.Priority.html#NONE"><code>Task.Priority.NONE</code></a>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the never-null priority of this task</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -436,6 +540,19 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getCustomFields()">
+<h3>getCustomFields</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="customfields/ICustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">ICustomField</a>&gt;</span>&nbsp;<span class="element-name">getCustomFields</span>()</div>
+<div class="block">Returns all the custom fields for this task.
+ <br>Custom Fields may not have a value set.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>all the custom fields for this task</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getListId()">
 <h3>getListId</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getListId</span>()</div>
@@ -457,6 +574,21 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="retrieveSpace()">
 <h3>retrieveSpace</h3>
 <div class="member-signature"><span class="return-type"><a href="../../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="Space.html" title="interface in pw.chew.clickup4j.api.entities">Space</a>&gt;</span>&nbsp;<span class="element-name">retrieveSpace</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="uploadAttachment(java.io.File,java.lang.String)">
+<h3>uploadAttachment</h3>
+<div class="member-signature"><span class="return-type"><a href="../../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="Attachment.html" title="interface in pw.chew.clickup4j.api.entities">Attachment</a>&gt;</span>&nbsp;<span class="element-name">uploadAttachment</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&nbsp;file,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;filename)</span></div>
+<div class="block">Uploads the specified <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/File.html" title="class or interface in java.io" class="external-link"><code>File</code></a> to this task.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>file</code> - the file to upload</dd>
+<dd><code>filename</code> - the name of the file</dd>
+<dt>Returns:</dt>
+<dd>a requester to upload an attachment to this task</dd>
+</dl>
 </section>
 </li>
 <li>

@@ -75,6 +75,10 @@ loadScripts(document, 'script');</script>
 <dt>All Superinterfaces:</dt>
 <dd><code><a href="ICustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">ICustomField</a></code></dd>
 </dl>
+<dl class="notes">
+<dt>All Known Implementing Classes:</dt>
+<dd><code><a href="../../../internal/entities/customfields/LabelsCustomFieldImpl.html" title="class in pw.chew.clickup4j.internal.entities.customfields">LabelsCustomFieldImpl</a></code></dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">LabelsCustomField</span><span class="extends-implements">
 extends <a href="ICustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">ICustomField</a></span></div>
@@ -112,14 +116,19 @@ extends <a href="ICustomField.html" title="interface in pw.chew.clickup4j.api.en
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="CustomFieldType.html" title="enum class in pw.chew.clickup4j.api.entities.customfields">CustomFieldType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="LabelsCustomField.Label.html" title="interface in pw.chew.clickup4j.api.entities.customfields">LabelsCustomField.Label</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLabels()" class="member-name-link">getLabels</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns all possible labels for this task.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="CustomFieldType.html" title="enum class in pw.chew.clickup4j.api.entities.customfields">CustomFieldType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Returns the type of this custom field.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="LabelsCustomField.Label.html" title="interface in pw.chew.clickup4j.api.entities.customfields">LabelsCustomField.Label</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="LabelsCustomField.Label.html" title="interface in pw.chew.clickup4j.api.entities.customfields">LabelsCustomField.Label</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the list of labels for this task.</div>
 </div>
 </div>
@@ -127,7 +136,7 @@ extends <a href="ICustomField.html" title="interface in pw.chew.clickup4j.api.en
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-pw.chew.clickup4j.api.entities.customfields.ICustomField">Methods inherited from interface&nbsp;pw.chew.clickup4j.api.entities.customfields.<a href="ICustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">ICustomField</a></h3>
-<code><a href="ICustomField.html#getId()">getId</a>, <a href="ICustomField.html#getName()">getName</a>, <a href="ICustomField.html#getTimeCreated()">getTimeCreated</a>, <a href="ICustomField.html#isRequired()">isRequired</a></code></div>
+<code><a href="ICustomField.html#getClickUp4j()">getClickUp4j</a>, <a href="ICustomField.html#getId()">getId</a>, <a href="ICustomField.html#getName()">getName</a>, <a href="ICustomField.html#getTimeCreated()">getTimeCreated</a>, <a href="ICustomField.html#isRequired()">isRequired</a></code></div>
 </section>
 </li>
 </ul>
@@ -148,6 +157,18 @@ extends <a href="ICustomField.html" title="interface in pw.chew.clickup4j.api.en
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ICustomField.html#getValue()">getValue</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomField.html" title="interface in pw.chew.clickup4j.api.entities.customfields">ICustomField</a></code></dd>
+<dt>Returns:</dt>
+<dd>a list of labels.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLabels()">
+<h3>getLabels</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="LabelsCustomField.Label.html" title="interface in pw.chew.clickup4j.api.entities.customfields">LabelsCustomField.Label</a>&gt;</span>&nbsp;<span class="element-name">getLabels</span>()</div>
+<div class="block">Returns all possible labels for this task.</div>
+<dl class="notes">
 <dt>Returns:</dt>
 <dd>a list of labels.</dd>
 </dl>
