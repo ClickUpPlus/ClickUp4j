@@ -16,6 +16,7 @@
 
 package pw.chew.clickup4j.internal.entities;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
 import pw.chew.clickup4j.api.ClickUp4j;
@@ -36,51 +37,70 @@ public class MemberImpl implements Member {
     }
 
     @Override
-    public User getUser() {
+    public @NotNull User getUser() {
         return new UserImpl(data.getJSONObject("user"), api);
     }
 
     @Override
-    public String getEmail() {
+    public @NotNull String getEmail() {
         return getUserData().getString("email");
     }
 
     @Override
-    public String getInitials() {
+    public @NotNull String getInitials() {
         return getUserData().getString("initials");
     }
 
     @Override
-    public int getRole() {
-        return getUserData().getInt("role");
+    public @NotNull Role getRole() {
+        int role = getUserData().getInt("role");
+
+        for (Role r : Role.values()) {
+            if (r.getValue() == role) {
+                return r;
+            }
+        }
+
+        return Role.UNKNOWN;
     }
 
     @Override
     @Nullable
     public String getCustomRole() {
-        return getUserData().getString("custom_role");
+        return getUserData().optString("custom_role", null);
     }
 
     @Override
     public OffsetDateTime getLastActive() {
-        String date = data.getString("last_active");
+        String date = data.optString("last_active", null);
+        if (date == null) return null;
+
         return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
 
     @Override
     public OffsetDateTime getDateJoined() {
-        String date = data.getString("date_joined");
+        String date = data.optString("date_joined", null);
+        if (date == null) return null;
+
         return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
 
     @Override
-    public OffsetDateTime getDateInvited() {
+    public @NotNull OffsetDateTime getDateInvited() {
         String date = data.getString("date_invited");
         return Instant.ofEpochMilli(Long.parseLong(date)).atOffset(ZoneOffset.UTC);
     }
 
     @Override
-    public ClickUp4j getClickUp4j() {
+    public @Nullable User getInvitedBy() {
+        if (data.has("invited_by")) return null;
+
+        return new UserImpl(data.getJSONObject("invited_by"), api);
+    }
+
+    @Override
+    public @NotNull ClickUp4j getClickUp4j() {
         return api;
     }
 
