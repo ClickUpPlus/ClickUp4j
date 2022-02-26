@@ -20,7 +20,6 @@ import io.javalin.Javalin;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DatatypeConverter;
 
 public class WebhookServer {
     private final Javalin app;
@@ -67,7 +66,7 @@ public class WebhookServer {
             byte[] hash = hasher.doFinal(body.getBytes());
 
             // to lowercase hexits
-            String hex = DatatypeConverter.printHexBinary(hash);
+            String hex = bytesToHex(hash);
 
             if (signature.equalsIgnoreCase(hex)) {
                 ctx.status(200);
@@ -90,5 +89,16 @@ public class WebhookServer {
 
     public boolean isRunning() {
         return isRunning;
+    }
+
+    String bytesToHex(byte[] bytes) {
+        final char[] hexArray = "0123456789abcdef".toCharArray();
+        char[] hexChars = new char[bytes.length * 2];
+        for (int j = 0, v; j < bytes.length; j++) {
+            v = bytes[j] & 0xFF;
+            hexChars[j * 2] = hexArray[v >>> 4];
+            hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+        }
+        return new String(hexChars);
     }
 }
