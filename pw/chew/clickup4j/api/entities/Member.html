@@ -43,7 +43,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested-class-summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
@@ -82,6 +82,21 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Interface</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static enum&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="Member.Role.html" class="type-name-link" title="enum class in pw.chew.clickup4j.api.entities">Member.Role</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method-summary">
@@ -93,33 +108,56 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="../ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClickUp4j()" class="member-name-link">getClickUp4j</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns this <a href="../ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomRole()" class="member-name-link">getCustomRole</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the custom role of this user, if any.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDateInvited()" class="member-name-link">getDateInvited</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns when this user was invited.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDateJoined()" class="member-name-link">getDateJoined</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns when this user joined the workspace.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEmail()" class="member-name-link">getEmail</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The email of the user.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInitials()" class="member-name-link">getInitials</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLastActive()" class="member-name-link">getLastActive</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRole()" class="member-name-link">getRole</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUser()" class="member-name-link">getUser</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The "initials" for this user.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Nullable <a href="User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInvitedBy()" class="member-name-link">getInvitedBy</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the inviting user for this member.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLastActive()" class="member-name-link">getLastActive</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns when this user was last active.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="Member.Role.html" title="enum class in pw.chew.clickup4j.api.entities">Member.Role</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRole()" class="member-name-link">getRole</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The role for this user.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUser()" class="member-name-link">getUser</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the <a href="User.html" title="interface in pw.chew.clickup4j.api.entities"><code>User</code></a> sub-interface of this member.</div>
+</div>
 </div>
 </div>
 </div>
@@ -137,25 +175,50 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getUser()">
 <h3>getUser</h3>
-<div class="member-signature"><span class="return-type"><a href="User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></span>&nbsp;<span class="element-name">getUser</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></span>&nbsp;<span class="element-name">getUser</span>()</div>
+<div class="block">Returns the <a href="User.html" title="interface in pw.chew.clickup4j.api.entities"><code>User</code></a> sub-interface of this member.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>never-null <a href="User.html" title="interface in pw.chew.clickup4j.api.entities"><code>User</code></a> sub-interface</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getEmail()">
 <h3>getEmail</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getEmail</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getEmail</span>()</div>
+<div class="block">The email of the user.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>never-null email</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getInitials()">
 <h3>getInitials</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInitials</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInitials</span>()</div>
+<div class="block">The "initials" for this user.
+ <br>This seems to be used internally in the API for users without a profile picture.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>never-null initials</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getRole()">
 <h3>getRole</h3>
-<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getRole</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="Member.Role.html" title="enum class in pw.chew.clickup4j.api.entities">Member.Role</a></span>&nbsp;<span class="element-name">getRole</span>()</div>
+<div class="block">The role for this user. This is an enum constant <a href="Member.Role.html" title="enum class in pw.chew.clickup4j.api.entities"><code>Member.Role</code></a> to store the possible values.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>never-null <a href="Member.Role.html" title="enum class in pw.chew.clickup4j.api.entities"><code>Member.Role</code></a></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -163,30 +226,76 @@ loadScripts(document, 'script');</script>
 <h3>getCustomRole</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="return-type">@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCustomRole</span>()</div>
+<div class="block">Returns the custom role of this user, if any.
+ <br>Custom Roles require Business Plus Plan or above.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>nullable custom role</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastActive()">
 <h3>getLastActive</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getLastActive</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type">@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getLastActive</span>()</div>
+<div class="block">Returns when this user was last active.
+ <br>If the user has been invited, but has not accepted yet, this will be <code>null</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>nullable last active date</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDateJoined()">
 <h3>getDateJoined</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateJoined</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type">@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateJoined</span>()</div>
+<div class="block">Returns when this user joined the workspace.
+ <br>If the user has been invited, but has not accepted yet, this will be <code>null</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>nullable join date</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDateInvited()">
 <h3>getDateInvited</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateInvited</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/OffsetDateTime.html" title="class or interface in java.time" class="external-link">OffsetDateTime</a></span>&nbsp;<span class="element-name">getDateInvited</span>()</div>
+<div class="block">Returns when this user was invited.
+ <br>All members have an invitation date, even if they have not accepted yet, and even if they're owner.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>never-null invitation date</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInvitedBy()">
+<h3>getInvitedBy</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="return-type">@Nullable <a href="User.html" title="interface in pw.chew.clickup4j.api.entities">User</a></span>&nbsp;<span class="element-name">getInvitedBy</span>()</div>
+<div class="block">Returns the inviting user for this member.
+ <br>Owners were never invited, so this may be <code>null</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>nullable inviting user</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getClickUp4j()">
 <h3>getClickUp4j</h3>
-<div class="member-signature"><span class="return-type"><a href="../ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></span>&nbsp;<span class="element-name">getClickUp4j</span>()</div>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="../ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></span>&nbsp;<span class="element-name">getClickUp4j</span>()</div>
+<div class="block">Returns this <a href="../ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>never-null <a href="../ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance</dd>
+</dl>
 </section>
 </li>
 </ul>

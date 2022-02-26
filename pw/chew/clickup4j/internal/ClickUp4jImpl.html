@@ -93,8 +93,10 @@ implements <a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,okhttp3.OkHttpClient)" class="member-name-link">ClickUp4jImpl</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;token,
- okhttp3.OkHttpClient&nbsp;client)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,okhttp3.OkHttpClient,pw.chew.clickup4j.internal.webhooks.WebhookServer,java.lang.String)" class="member-name-link">ClickUp4jImpl</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;token,
+ okhttp3.OkHttpClient&nbsp;client,
+ <a href="webhooks/WebhookServer.html" title="class in pw.chew.clickup4j.internal.webhooks">WebhookServer</a>&nbsp;webhookServer,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;webhookEndpoint)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -140,10 +142,25 @@ implements <a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a list of tasks in a specified list ID.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities">Workspace</a>&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retrieveWorkspaces()" class="member-name-link">retrieveWorkspaces</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../api/entities/Webhook.html" title="interface in pw.chew.clickup4j.api.entities">Webhook</a>&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retrieveWebhooks(java.lang.String)" class="member-name-link">retrieveWebhooks</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;workspaceId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves a list of <a href="../api/entities/Webhook.html" title="interface in pw.chew.clickup4j.api.entities"><code>webhooks</code></a> for the specified <a href="../api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities"><code>workspace</code></a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities">Workspace</a>&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retrieveWorkspaces()" class="member-name-link">retrieveWorkspaces</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Retrieves a list of workspaces the currently authenticated user can access.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startWebhookServer(java.lang.String)" class="member-name-link">startWebhookServer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;workspaceId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Starts a webhook server with the settings provided from the <a href="../api/ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api"><code>ClickUp4jBuilder</code></a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stopWebhookServer()" class="member-name-link">stopWebhookServer</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Shuts down the webhook server.</div>
 </div>
 </div>
 </div>
@@ -163,10 +180,12 @@ implements <a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,okhttp3.OkHttpClient)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,okhttp3.OkHttpClient,pw.chew.clickup4j.internal.webhooks.WebhookServer,java.lang.String)">
 <h3>ClickUp4jImpl</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ClickUp4jImpl</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;token,
- okhttp3.OkHttpClient&nbsp;client)</span></div>
+ okhttp3.OkHttpClient&nbsp;client,
+ <a href="webhooks/WebhookServer.html" title="class in pw.chew.clickup4j.internal.webhooks">WebhookServer</a>&nbsp;webhookServer,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;webhookEndpoint)</span></div>
 </section>
 </li>
 </ul>
@@ -284,6 +303,56 @@ implements <a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j
 <dd><code><a href="../api/ClickUp4j.html#retrieveSelfUser()">retrieveSelfUser</a></code>&nbsp;in interface&nbsp;<code><a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></dd>
 <dt>Returns:</dt>
 <dd>the user</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="retrieveWebhooks(java.lang.String)">
+<h3>retrieveWebhooks</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../api/entities/Webhook.html" title="interface in pw.chew.clickup4j.api.entities">Webhook</a>&gt;&gt;</span>&nbsp;<span class="element-name">retrieveWebhooks</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;workspaceId)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../api/ClickUp4j.html#retrieveWebhooks(java.lang.String)">ClickUp4j</a></code></span></div>
+<div class="block">Retrieves a list of <a href="../api/entities/Webhook.html" title="interface in pw.chew.clickup4j.api.entities"><code>webhooks</code></a> for the specified <a href="../api/entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities"><code>workspace</code></a>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../api/ClickUp4j.html#retrieveWebhooks(java.lang.String)">retrieveWebhooks</a></code>&nbsp;in interface&nbsp;<code><a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>workspaceId</code> - the workspace ID</dd>
+<dt>Returns:</dt>
+<dd>the list of webhooks</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="startWebhookServer(java.lang.String)">
+<h3>startWebhookServer</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">startWebhookServer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;workspaceId)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../api/ClickUp4j.html#startWebhookServer(java.lang.String)">ClickUp4j</a></code></span></div>
+<div class="block">Starts a webhook server with the settings provided from the <a href="../api/ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api"><code>ClickUp4jBuilder</code></a>.
+ <br>This method will do the following:
+ <ol>
+     <li>Retrieve existing webhooks</li>
+     <li>If a webhook with the endpoint exists, do nothing.</li>
+     <li>Otherwise, create a new webhook with the endpoint.</li>
+ </ol>
+ <br><b>Be sure to stop the server when you're done with <a href="../api/ClickUp4j.html#stopWebhookServer()"><code>ClickUp4j.stopWebhookServer()</code></a>.</b></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../api/ClickUp4j.html#startWebhookServer(java.lang.String)">startWebhookServer</a></code>&nbsp;in interface&nbsp;<code><a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>workspaceId</code> - the workspace ID</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="stopWebhookServer()">
+<h3>stopWebhookServer</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">stopWebhookServer</span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../api/ClickUp4j.html#stopWebhookServer()">ClickUp4j</a></code></span></div>
+<div class="block">Shuts down the webhook server.
+ <br>This method will also delete the webhook from ClickUp.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../api/ClickUp4j.html#stopWebhookServer()">stopWebhookServer</a></code>&nbsp;in interface&nbsp;<code><a href="../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></dd>
 </dl>
 </section>
 </li>

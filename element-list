@@ -5,3 +5,4 @@ pw.chew.clickup4j.internal
 pw.chew.clickup4j.internal.entities
 pw.chew.clickup4j.internal.entities.customfields
 pw.chew.clickup4j.internal.requests
+pw.chew.clickup4j.internal.webhooks

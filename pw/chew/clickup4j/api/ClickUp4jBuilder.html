@@ -102,6 +102,15 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#token" class="member-name-link">token</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>protected boolean</code></div>
+<div class="col-second odd-row-color"><code><a href="#useWebhookServer" class="member-name-link">useWebhookServer</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#webhookEndpoint" class="member-name-link">webhookEndpoint</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>protected int</code></div>
+<div class="col-second odd-row-color"><code><a href="#webhookPort" class="member-name-link">webhookPort</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -156,6 +165,28 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the token that will be used by the <a href="ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance to log in when <a href="#build()"><code>build()</code></a> is called.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWebhookEndpoint(java.lang.String)" class="member-name-link">setWebhookEndpoint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;webhookEndpoint)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the webhook endpoint that the <a href="ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance will use.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setWebhookPort(int)" class="member-name-link">setWebhookPort</a><wbr>(int&nbsp;webhookPort)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the webhook port that the <a href="ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance will use.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#useWebhookServer(boolean)" class="member-name-link">useWebhookServer</a><wbr>(boolean&nbsp;useWebhookServer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets whether the <a href="ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance will use the webhook server.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#useWebhookServer(boolean,java.lang.String,int)" class="member-name-link">useWebhookServer</a><wbr>(boolean&nbsp;useWebhookServer,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;webhookEndpoint,
+ int&nbsp;webhookPort)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Have your cake and eat it too! This is the method that completely builds and uses the webhook server.</div>
+</div>
 </div>
 </div>
 </div>
@@ -189,6 +220,24 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="token">
 <h3>token</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">token</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="useWebhookServer">
+<h3>useWebhookServer</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">useWebhookServer</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="webhookEndpoint">
+<h3>webhookEndpoint</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">webhookEndpoint</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="webhookPort">
+<h3>webhookPort</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">webhookPort</span></div>
 </section>
 </li>
 </ul>
@@ -288,6 +337,68 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>client</code> - The new <code>OkHttpClient</code> to use</dd>
+<dt>Returns:</dt>
+<dd>This builder instance. Useful for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="useWebhookServer(boolean)">
+<h3>useWebhookServer</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></span>&nbsp;<span class="element-name">useWebhookServer</span><wbr><span class="parameters">(boolean&nbsp;useWebhookServer)</span></div>
+<div class="block">Sets whether the <a href="ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance will use the webhook server.
+ This is required to listen to and handle webhook events.
+ <br>If you enable this, you <b>must</b> set an endpoint with <a href="#setWebhookEndpoint(java.lang.String)"><code>setWebhookEndpoint(String)</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>useWebhookServer</code> - Whether to use the webhook server</dd>
+<dt>Returns:</dt>
+<dd>This builder instance. Useful for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setWebhookEndpoint(java.lang.String)">
+<h3>setWebhookEndpoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></span>&nbsp;<span class="element-name">setWebhookEndpoint</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;webhookEndpoint)</span></div>
+<div class="block">Sets the webhook endpoint that the <a href="ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance will use.
+ <br>This should be equal to something like <code>http://my.server.ip:4545/</code>.
+ <br>The port can be specified with <a href="#setWebhookPort(int)"><code>setWebhookPort(int)</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>webhookEndpoint</code> - The webhook endpoint to use</dd>
+<dt>Returns:</dt>
+<dd>This builder instance. Useful for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setWebhookPort(int)">
+<h3>setWebhookPort</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></span>&nbsp;<span class="element-name">setWebhookPort</span><wbr><span class="parameters">(int&nbsp;webhookPort)</span></div>
+<div class="block">Sets the webhook port that the <a href="ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance will use.
+ <br>By default, this is <code>4545</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>webhookPort</code> - The webhook port to use</dd>
+<dt>Returns:</dt>
+<dd>This builder instance. Useful for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="useWebhookServer(boolean,java.lang.String,int)">
+<h3>useWebhookServer</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></span>&nbsp;<span class="element-name">useWebhookServer</span><wbr><span class="parameters">(boolean&nbsp;useWebhookServer,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;webhookEndpoint,
+ int&nbsp;webhookPort)</span></div>
+<div class="block">Have your cake and eat it too! This is the method that completely builds and uses the webhook server.
+ <br>Be sure to start the webhook server with <a href="ClickUp4j.html#startWebhookServer(java.lang.String)"><code>ClickUp4j.startWebhookServer(String)</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>useWebhookServer</code> - Whether to use the webhook server</dd>
+<dd><code>webhookEndpoint</code> - The webhook endpoint to use</dd>
+<dd><code>webhookPort</code> - The webhook port to use</dd>
 <dt>Returns:</dt>
 <dd>This builder instance. Useful for chaining.</dd>
 </dl>
