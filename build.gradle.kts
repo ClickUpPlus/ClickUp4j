@@ -27,8 +27,17 @@ repositories {
 dependencies {
     compileOnly("org.jetbrains", "annotations", "23.0.0")
 
+    // Required for making requests and receiving responses
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
+
+    // JSON parsing
     implementation("org.json:json:20211205")
+
+    // For the websocket server
+    implementation("io.javalin", "javalin", "4.3.0")
+
+    // Logging with slf4j
+    implementation("org.slf4j", "slf4j-api", "1.7.36")
 
     // Add Junit as a test dependency
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")

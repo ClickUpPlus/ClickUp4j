@@ -15,8 +15,10 @@
  */
 package pw.chew.clickup4j.internal;
 
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -24,13 +26,16 @@ import pw.chew.clickup4j.api.ClickUp4j;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.api.entities.User;
+import pw.chew.clickup4j.api.entities.Webhook;
 import pw.chew.clickup4j.api.entities.Workspace;
 import pw.chew.clickup4j.internal.entities.SpaceImpl;
 import pw.chew.clickup4j.internal.entities.TaskImpl;
 import pw.chew.clickup4j.internal.entities.UserImpl;
+import pw.chew.clickup4j.internal.entities.WebhookImpl;
 import pw.chew.clickup4j.internal.entities.WorkspaceImpl;
 import pw.chew.clickup4j.internal.requests.Requester;
 import pw.chew.clickup4j.internal.requests.Route;
+import pw.chew.clickup4j.internal.webhooks.WebhookServer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,9 +46,15 @@ public class ClickUp4jImpl implements ClickUp4j {
     private final OkHttpClient client;
     private final String token;
 
-    public ClickUp4jImpl(String token, OkHttpClient client) {
+    private final WebhookServer webhookServer;
+    private final String webhookEndpoint;
+    private Webhook webhook;
+
+    public ClickUp4jImpl(String token, OkHttpClient client, WebhookServer webhookServer, String webhookEndpoint) {
         this.token = token;
         this.client = client;
+        this.webhookServer = webhookServer;
+        this.webhookEndpoint = webhookEndpoint;
     }
 
     @Override
@@ -136,5 +147,67 @@ public class ClickUp4jImpl implements ClickUp4j {
         Function<String, User> mapper = response -> new UserImpl(new JSONObject(response), this);
 
         return new Requester<>(client, request, mapper);
+    }
+
+    @Override
+    public Requester<List<Webhook>> retrieveWebhooks(String workspaceId) {
+        Request request = Route.Webhook.GET_WEBHOOKS.build(workspaceId)
+            .addHeader("Authorization", token)
+            .build();
+
+        Function<String, List<Webhook>> mapper = response -> {
+            JSONObject hooks = new JSONObject(response);
+            List<Webhook> webhooks = new ArrayList<>();
+            for (Object hook : hooks.getJSONArray("webhooks")) {
+                JSONObject data = (JSONObject) hook;
+                webhooks.add(new WebhookImpl(data, this));
+            }
+            return webhooks;
+        };
+
+        return new Requester<>(client, request, mapper);
+    }
+
+    @Override
+    public void startWebhookServer(String workspaceId) {
+        if (webhookServer == null || webhookEndpoint == null)
+            throw new IllegalStateException("Webhook server is not configured");
+
+        retrieveWebhooks(workspaceId).queue(webhooks -> {
+            for (Webhook webhook : webhooks) {
+                if (webhook.getEndpoint().equals(webhookEndpoint)) {
+                    this.webhook = webhook;
+                    break;
+                }
+            }
+
+            if (this.webhook == null) {
+                JSONObject jsonObject = new JSONObject()
+                    .put("endpoint", webhookEndpoint)
+                    .put("events", new JSONArray().put("*"));
+
+                RequestBody body = RequestBody.create(jsonObject.toString(), MediaType.parse("application/json; charset=utf-8"));
+
+                Request request = Route.Webhook.CREATE_WEBHOOK
+                    .body(body).build(workspaceId)
+                    .addHeader("Authorization", token)
+                    .build();
+
+                new Requester<>(client, request, response -> new WebhookImpl(new JSONObject(response).getJSONObject("webhook"), this)).queue(responseHook -> {
+                    this.webhook = responseHook;
+
+                    webhookServer.setSecret(responseHook.getSecret());
+                    webhookServer.start();
+                });
+            } else {
+                webhookServer.setSecret(this.webhook.getSecret());
+                webhookServer.start();
+            }
+        });
+    }
+
+    @Override
+    public void stopWebhookServer() {
+        webhook.delete().queue(unused -> webhookServer.stop());
     }
 }

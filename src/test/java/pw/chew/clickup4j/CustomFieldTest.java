@@ -30,7 +30,7 @@ public class CustomFieldTest {
         JSONObject dummyJson = new JSONObject()
             .put("type_config", new JSONObject().put("emoji", "1f928"));
 
-        EmojiCustomField field = new EmojiCustomFieldImpl(dummyJson, new ClickUp4jImpl("", null));
+        EmojiCustomField field = new EmojiCustomFieldImpl(dummyJson, new ClickUp4jImpl("", null, null, null));
 
         // 1f928 => 🤨
         assertEquals("\uD83E\uDD28", field.getEmoji());

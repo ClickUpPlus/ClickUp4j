@@ -17,6 +17,7 @@
 package pw.chew.clickup4j.internal.requests;
 
 import okhttp3.Request;
+import okhttp3.RequestBody;
 
 import java.util.Arrays;
 
@@ -38,12 +39,20 @@ public class Route {
         public static final Route GET_SPACE = new Route("GET", "/space/:space_id");
     }
 
+    public static class Webhook {
+        public static final Route CREATE_WEBHOOK = new Route("POST", "/team/:team_id/webhook");
+        public static final Route GET_WEBHOOKS = new Route("GET", "/team/:team_id/webhook");
+        public static final Route UPDATE_WEBHOOK = new Route("PUT", "/webhook/:webhook_id");
+        public static final Route DELETE_WEBHOOK = new Route("DELETE", "/webhook/:webhook_id");
+    }
+
     public static class Workspace {
         public static final Route GET_WORKSPACES = new Route("GET", "/team");
     }
 
     private final String method;
     private final String path;
+    private RequestBody body = null;
 
     private final String baseUrl = "https://api.clickup.com/api/v2";
 
@@ -96,6 +105,11 @@ public class Route {
     public Request.Builder build(String... values) {
         return new Request.Builder()
             .url(buildUrl(values))
-            .method(method, null);
+            .method(method, body);
+    }
+
+    public Route body(RequestBody body) {
+        this.body = body;
+        return this;
     }
 }

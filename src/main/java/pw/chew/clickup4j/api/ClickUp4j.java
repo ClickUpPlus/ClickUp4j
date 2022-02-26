@@ -20,6 +20,7 @@ import org.jetbrains.annotations.NotNull;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.api.entities.User;
+import pw.chew.clickup4j.api.entities.Webhook;
 import pw.chew.clickup4j.api.entities.Workspace;
 import pw.chew.clickup4j.internal.requests.Requester;
 
@@ -83,4 +84,32 @@ public interface ClickUp4j {
      * @return the user
      */
     Requester<User> retrieveSelfUser();
+
+    /**
+     * Retrieves a list of {@link Webhook webhooks} for the specified {@link Workspace workspace}.
+     *
+     * @param workspaceId the workspace ID
+     * @return the list of webhooks
+     */
+    Requester<List<Webhook>> retrieveWebhooks(String workspaceId);
+
+    /**
+     * Starts a webhook server with the settings provided from the {@link ClickUp4jBuilder}.
+     * <br>This method will do the following:
+     * <ol>
+     *     <li>Retrieve existing webhooks</li>
+     *     <li>If a webhook with the endpoint exists, do nothing.</li>
+     *     <li>Otherwise, create a new webhook with the endpoint.</li>
+     * </ol>
+     * <br><b>Be sure to stop the server when you're done with {@link #stopWebhookServer()}.</b>
+     *
+     * @param workspaceId the workspace ID
+     */
+    void startWebhookServer(String workspaceId);
+
+    /**
+     * Shuts down the webhook server.
+     * <br>This method will also delete the webhook from ClickUp.
+     */
+    void stopWebhookServer();
 }

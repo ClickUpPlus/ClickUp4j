@@ -19,6 +19,7 @@ import okhttp3.OkHttpClient;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import pw.chew.clickup4j.internal.ClickUp4jImpl;
+import pw.chew.clickup4j.internal.webhooks.WebhookServer;
 
 /**
  * Used to create new {@link ClickUp4j} instances.
@@ -30,6 +31,9 @@ public class ClickUp4jBuilder {
     protected OkHttpClient.Builder httpClientBuilder = null;
     protected OkHttpClient httpClient = null;
     protected String token;
+    protected boolean useWebhookServer;
+    protected String webhookEndpoint;
+    protected int webhookPort = 4545;
 
     /**
      * Create a builder using the specified token
@@ -97,6 +101,60 @@ public class ClickUp4jBuilder {
     }
 
     /**
+     * Sets whether the {@link ClickUp4j} instance will use the webhook server.
+     * This is required to listen to and handle webhook events.
+     * <br>If you enable this, you <b>must</b> set an endpoint with {@link #setWebhookEndpoint(String)}.
+     *
+     * @param useWebhookServer Whether to use the webhook server
+     * @return This builder instance. Useful for chaining.
+     */
+    public ClickUp4jBuilder useWebhookServer(boolean useWebhookServer) {
+        this.useWebhookServer = useWebhookServer;
+        return this;
+    }
+
+    /**
+     * Sets the webhook endpoint that the {@link ClickUp4j} instance will use.
+     * <br>This should be equal to something like {@code http://my.server.ip:4545/}.
+     * <br>The port can be specified with {@link #setWebhookPort(int)}.
+     *
+     * @param webhookEndpoint The webhook endpoint to use
+     * @return This builder instance. Useful for chaining.
+     */
+    public ClickUp4jBuilder setWebhookEndpoint(String webhookEndpoint) {
+        this.webhookEndpoint = webhookEndpoint;
+        return this;
+    }
+
+    /**
+     * Sets the webhook port that the {@link ClickUp4j} instance will use.
+     * <br>By default, this is {@code 4545}.
+     *
+     * @param webhookPort The webhook port to use
+     * @return This builder instance. Useful for chaining.
+     */
+    public ClickUp4jBuilder setWebhookPort(int webhookPort) {
+        this.webhookPort = webhookPort;
+        return this;
+    }
+
+    /**
+     * Have your cake and eat it too! This is the method that completely builds and uses the webhook server.
+     * <br>Be sure to start the webhook server with {@link ClickUp4j#startWebhookServer(String)}.
+     *
+     * @param useWebhookServer Whether to use the webhook server
+     * @param webhookEndpoint The webhook endpoint to use
+     * @param webhookPort The webhook port to use
+     * @return This builder instance. Useful for chaining.
+     */
+    public ClickUp4jBuilder useWebhookServer(boolean useWebhookServer, String webhookEndpoint, int webhookPort) {
+        this.useWebhookServer = useWebhookServer;
+        this.webhookEndpoint = webhookEndpoint;
+        this.webhookPort = webhookPort;
+        return this;
+    }
+
+    /**
      * Builds a new {@link ClickUp4j} instance and uses the provided token.
 
      * @return A {@link ClickUp4j} instance.
@@ -110,6 +168,16 @@ public class ClickUp4jBuilder {
             httpClient = this.httpClientBuilder.build();
         }
 
-        return new ClickUp4jImpl(this.token, httpClient);
+        WebhookServer webhookServer = null;
+
+        if (this.useWebhookServer) {
+            if (this.webhookEndpoint == null)
+                throw new IllegalStateException("Webhook endpoint must be set if webhook server is enabled");
+
+            webhookServer = new WebhookServer();
+            webhookServer.setPort(this.webhookPort);
+        }
+
+        return new ClickUp4jImpl(this.token, httpClient, webhookServer, this.webhookEndpoint);
     }
 }
