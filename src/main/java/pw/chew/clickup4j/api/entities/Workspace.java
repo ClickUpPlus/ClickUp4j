@@ -18,6 +18,7 @@ package pw.chew.clickup4j.api.entities;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import pw.chew.clickup4j.api.ClickUp4j;
+import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.awt.Color;
 import java.util.List;
@@ -68,6 +69,14 @@ public interface Workspace {
      */
     @NotNull
     List<Member> getMembers();
+
+    /**
+     * Retrieves a list of {@link Goal goals} in this workspace.
+     *
+     * @return Never-null List of {@link Goal goals} in this workspace.
+     */
+    @NotNull
+    Requester<List<Goal>> retrieveGoals();
 
     /**
      * Returns this ClickUp4j instance.

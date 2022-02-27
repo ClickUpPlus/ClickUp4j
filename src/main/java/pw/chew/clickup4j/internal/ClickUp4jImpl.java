@@ -23,11 +23,13 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import pw.chew.clickup4j.api.ClickUp4j;
+import pw.chew.clickup4j.api.entities.Goal;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.api.entities.User;
 import pw.chew.clickup4j.api.entities.Webhook;
 import pw.chew.clickup4j.api.entities.Workspace;
+import pw.chew.clickup4j.internal.entities.GoalImpl;
 import pw.chew.clickup4j.internal.entities.SpaceImpl;
 import pw.chew.clickup4j.internal.entities.TaskImpl;
 import pw.chew.clickup4j.internal.entities.UserImpl;
@@ -133,6 +135,31 @@ public class ClickUp4jImpl implements ClickUp4j {
         Function<String, List<Workspace>> mapper = response -> new JSONObject(response).getJSONArray("teams")
             .toList().stream()
             .map(jsonObject -> new WorkspaceImpl((JSONObject) jsonObject, this))
+            .collect(Collectors.toList());
+
+        return new Requester<>(client, request, mapper);
+    }
+
+    @Override
+    public Requester<Goal> retrieveGoal(String goalId) {
+        Request request = Route.Goal.GET_GOAL.build(goalId)
+            .addHeader("Authorization", token)
+            .build();
+
+        Function<String, Goal> mapper = response -> new GoalImpl(new JSONObject(response), this);
+
+        return new Requester<>(client, request, mapper);
+    }
+
+    @Override
+    public Requester<List<Goal>> retrieveGoals(String workspaceId) {
+        Request request = Route.Goal.GET_GOALS.build(workspaceId)
+            .addHeader("Authorization", token)
+            .build();
+
+        Function<String, List<Goal>> mapper = response -> new JSONObject(response).getJSONArray("goals")
+            .toList().stream()
+            .map(jsonObject -> new GoalImpl((JSONObject) jsonObject, this))
             .collect(Collectors.toList());
 
         return new Requester<>(client, request, mapper);

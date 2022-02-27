@@ -17,6 +17,7 @@ package pw.chew.clickup4j.api;
 
 import okhttp3.OkHttpClient;
 import org.jetbrains.annotations.NotNull;
+import pw.chew.clickup4j.api.entities.Goal;
 import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.api.entities.User;
@@ -76,6 +77,22 @@ public interface ClickUp4j {
      * @return the list of workspaces
      */
     Requester<List<Workspace>> retrieveWorkspaces();
+
+    /**
+     * Retrieve a specific {@link Goal goal} by ID.
+     *
+     * @param goalId the goal ID
+     * @return the goal
+     */
+    Requester<Goal> retrieveGoal(String goalId);
+
+    /**
+     * Retrieves a list of {@link Goal goals} for the specified {@link Workspace workspace}.
+     *
+     * @param workspaceId the workspace ID
+     * @return the list of goals
+     */
+    Requester<List<Goal>> retrieveGoals(String workspaceId);
 
     /**
      * Retrieves the currently logged-in User.

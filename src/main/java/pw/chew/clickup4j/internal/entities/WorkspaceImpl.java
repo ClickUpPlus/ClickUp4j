@@ -20,8 +20,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
 import pw.chew.clickup4j.api.ClickUp4j;
+import pw.chew.clickup4j.api.entities.Goal;
 import pw.chew.clickup4j.api.entities.Member;
 import pw.chew.clickup4j.api.entities.Workspace;
+import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.awt.Color;
 import java.util.List;
@@ -59,6 +61,11 @@ public class WorkspaceImpl implements Workspace {
     @Override
     public @NotNull List<Member> getMembers() {
         return data.getJSONArray("members").toList().stream().map(o -> new MemberImpl((JSONObject) o, api)).collect(Collectors.toList());
+    }
+
+    @Override
+    public @NotNull Requester<List<Goal>> retrieveGoals() {
+        return api.retrieveGoals(this.getId());
     }
 
     @Override

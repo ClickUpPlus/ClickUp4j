@@ -26,6 +26,11 @@ public class Route {
         public static final Route GET_USER = new Route("GET", "/user");
     }
 
+    public static class Goal {
+        public static final Route GET_GOAL = new Route("GET", "/goal/:goal_id");
+        public static final Route GET_GOALS = new Route("GET", "/team/:team_id/goal");
+    }
+
     public static class List {
         public static final Route GET_TASKS = new Route("GET", "/list/:list_id/task");
     }
