@@ -33,6 +33,7 @@ public class Route {
     public static class Task {
         public static final Route GET_TASK = new Route("GET", "/task/:task_id");
         public static final Route UPLOAD_ATTACHMENT = new Route("POST", "/task/:task_id/attachment");
+        public static final Route DELETE = new Route("DELETE", "/task/:task_id");
     }
 
     public static class Space {

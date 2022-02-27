@@ -36,8 +36,6 @@ import pw.chew.clickup4j.internal.requests.Route;
 
 import java.awt.Color;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.OffsetDateTime;
@@ -244,6 +242,15 @@ public class TaskImpl implements Task {
     @Override
     public Requester<Task> resolve() {
         return api.retrieveTask(getId());
+    }
+
+    @Override
+    public Requester<Void> delete() {
+        Request request = Route.Task.DELETE.build(getId())
+            .addHeader("Authorization", api.getToken())
+            .build();
+
+        return new Requester<>(api.getHttpClient(), request, r -> null);
     }
 
     public static class StatusImpl implements Status {

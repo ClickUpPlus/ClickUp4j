@@ -263,6 +263,13 @@ public interface Task {
     Requester<Task> resolve();
 
     /**
+     * Deletes this task.
+     *
+     * @return a requester to delete this task
+     */
+    Requester<Void> delete();
+
+    /**
      * Represents a status of a task.
      */
     interface Status {
