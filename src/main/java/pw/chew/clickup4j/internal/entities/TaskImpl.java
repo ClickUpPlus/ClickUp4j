@@ -30,7 +30,9 @@ import pw.chew.clickup4j.api.entities.Space;
 import pw.chew.clickup4j.api.entities.Task;
 import pw.chew.clickup4j.api.entities.User;
 import pw.chew.clickup4j.api.entities.customfields.ICustomField;
+import pw.chew.clickup4j.api.entities.managers.TaskManager;
 import pw.chew.clickup4j.internal.entities.customfields.CustomFieldImpl;
+import pw.chew.clickup4j.internal.entities.managers.TaskManagerImpl;
 import pw.chew.clickup4j.internal.requests.Requester;
 import pw.chew.clickup4j.internal.requests.Route;
 
@@ -237,6 +239,11 @@ public class TaskImpl implements Task {
     @NotNull
     public String getUrl() {
         return data.getString("url");
+    }
+
+    @Override
+    public @NotNull TaskManager getManager() {
+        return new TaskManagerImpl(api, getId());
     }
 
     @Override

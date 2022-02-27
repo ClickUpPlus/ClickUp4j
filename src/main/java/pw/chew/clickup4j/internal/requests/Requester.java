@@ -17,6 +17,7 @@ package pw.chew.clickup4j.internal.requests;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -27,6 +28,8 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class Requester<T> {
+    public final static MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
     private final OkHttpClient client;
     private final Request request;
     private final Function<String, T> handler;
@@ -47,8 +50,12 @@ public class Requester<T> {
                 try {
                     String string = response.body().string();
 
-                    T result = handler.apply(string);
-                    onSuccess.accept(result);
+                    if (response.isSuccessful()) {
+                        T result = handler.apply(string);
+                        onSuccess.accept(result);
+                    } else {
+                        throw new Exception(string);
+                    }
                 } catch (Exception e) {
                     onFailure.accept(e);
                 }
@@ -67,7 +74,7 @@ public class Requester<T> {
      * @param onSuccess The callback to call when the request completes successfully.
      */
     public void queue(Consumer<T> onSuccess) {
-        queue(onSuccess, (Throwable t) -> {});
+        queue(onSuccess, Throwable::printStackTrace);
     }
 
     public T complete() {

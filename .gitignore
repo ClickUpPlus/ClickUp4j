@@ -33,3 +33,6 @@ gradle.properties
 # netbeans files
 /.nb-gradle/
 *.nb-gradle-properties
+
+# private files
+src/test/java/pw/chew/clickup4j/PrivateTest.java

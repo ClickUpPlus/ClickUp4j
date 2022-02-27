@@ -18,6 +18,7 @@ package pw.chew.clickup4j.api.entities;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import pw.chew.clickup4j.api.entities.customfields.ICustomField;
+import pw.chew.clickup4j.api.entities.managers.TaskManager;
 import pw.chew.clickup4j.internal.requests.Requester;
 
 import java.awt.Color;
@@ -253,6 +254,15 @@ public interface Task {
      */
     @NotNull
     String getUrl();
+
+    /**
+     * Return the manager of this task.
+     * <br>This is used to modify the task.
+     *
+     * @return the manager of this task
+     */
+    @NotNull
+    TaskManager getManager();
 
     /**
      * Resolves missing fields in this task.

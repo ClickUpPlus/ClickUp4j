@@ -18,6 +18,8 @@ package pw.chew.clickup4j.internal.requests;
 
 import okhttp3.Request;
 import okhttp3.RequestBody;
+import org.jetbrains.annotations.NotNull;
+import org.json.JSONObject;
 
 import java.util.Arrays;
 
@@ -37,6 +39,7 @@ public class Route {
 
     public static class Task {
         public static final Route GET_TASK = new Route("GET", "/task/:task_id");
+        public static final Route UPDATE_TASK = new Route("PUT", "/task/:task_id");
         public static final Route UPLOAD_ATTACHMENT = new Route("POST", "/task/:task_id/attachment");
         public static final Route DELETE = new Route("DELETE", "/task/:task_id");
     }
@@ -116,6 +119,11 @@ public class Route {
 
     public Route body(RequestBody body) {
         this.body = body;
+        return this;
+    }
+
+    public Route body(@NotNull JSONObject body) {
+        this.body = RequestBody.create(body.toString(), Requester.JSON);
         return this;
     }
 }
