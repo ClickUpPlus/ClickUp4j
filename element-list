@@ -1,8 +1,10 @@
 pw.chew.clickup4j.api
 pw.chew.clickup4j.api.entities
 pw.chew.clickup4j.api.entities.customfields
+pw.chew.clickup4j.api.entities.managers
 pw.chew.clickup4j.internal
 pw.chew.clickup4j.internal.entities
 pw.chew.clickup4j.internal.entities.customfields
+pw.chew.clickup4j.internal.entities.managers
 pw.chew.clickup4j.internal.requests
 pw.chew.clickup4j.internal.webhooks
