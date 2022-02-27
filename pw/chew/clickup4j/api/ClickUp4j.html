@@ -102,6 +102,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Gets the token currently being used for requests.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="entities/Goal.html" title="interface in pw.chew.clickup4j.api.entities">Goal</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#retrieveGoal(java.lang.String)" class="member-name-link">retrieveGoal</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;goalId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieve a specific <a href="entities/Goal.html" title="interface in pw.chew.clickup4j.api.entities"><code>goal</code></a> by ID.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="entities/Goal.html" title="interface in pw.chew.clickup4j.api.entities">Goal</a>&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#retrieveGoals(java.lang.String)" class="member-name-link">retrieveGoals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;workspaceId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Retrieves a list of <a href="entities/Goal.html" title="interface in pw.chew.clickup4j.api.entities"><code>goals</code></a> for the specified <a href="entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities"><code>workspace</code></a>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="entities/User.html" title="interface in pw.chew.clickup4j.api.entities">User</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#retrieveSelfUser()" class="member-name-link">retrieveSelfUser</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -230,6 +240,32 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the list of workspaces</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="retrieveGoal(java.lang.String)">
+<h3>retrieveGoal</h3>
+<div class="member-signature"><span class="return-type"><a href="../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="entities/Goal.html" title="interface in pw.chew.clickup4j.api.entities">Goal</a>&gt;</span>&nbsp;<span class="element-name">retrieveGoal</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;goalId)</span></div>
+<div class="block">Retrieve a specific <a href="entities/Goal.html" title="interface in pw.chew.clickup4j.api.entities"><code>goal</code></a> by ID.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>goalId</code> - the goal ID</dd>
+<dt>Returns:</dt>
+<dd>the goal</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="retrieveGoals(java.lang.String)">
+<h3>retrieveGoals</h3>
+<div class="member-signature"><span class="return-type"><a href="../internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="entities/Goal.html" title="interface in pw.chew.clickup4j.api.entities">Goal</a>&gt;&gt;</span>&nbsp;<span class="element-name">retrieveGoals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;workspaceId)</span></div>
+<div class="block">Retrieves a list of <a href="entities/Goal.html" title="interface in pw.chew.clickup4j.api.entities"><code>goals</code></a> for the specified <a href="entities/Workspace.html" title="interface in pw.chew.clickup4j.api.entities"><code>workspace</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>workspaceId</code> - the workspace ID</dd>
+<dt>Returns:</dt>
+<dd>the list of goals</dd>
 </dl>
 </section>
 </li>
