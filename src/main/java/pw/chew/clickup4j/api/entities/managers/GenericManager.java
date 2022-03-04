@@ -25,7 +25,7 @@ import java.util.function.Consumer;
 /**
  * A generic manager for ClickUp entities.
  */
-public interface GenericManager {
+public interface GenericManager<T> {
     /**
      * Returns the {@link ClickUp4j} instance.
      *
@@ -33,4 +33,19 @@ public interface GenericManager {
      */
     @NotNull
     ClickUp4j getClickUp4j();
+
+    /**
+     * Saves the entity.
+     * <br>Pass a consumer to be called when the request is complete.
+     *
+     * @param consumer The consumer to be called when the request is complete.
+     */
+    void save(Consumer<T> consumer);
+
+    /**
+     * Synchronously saves the entity.
+     *
+     * @return The saved entity.
+     */
+    T complete();
 }

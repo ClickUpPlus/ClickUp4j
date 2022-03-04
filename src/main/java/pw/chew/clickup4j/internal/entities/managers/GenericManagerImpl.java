@@ -20,7 +20,9 @@ import org.jetbrains.annotations.NotNull;
 import pw.chew.clickup4j.api.ClickUp4j;
 import pw.chew.clickup4j.api.entities.managers.GenericManager;
 
-public class GenericManagerImpl implements GenericManager {
+import java.util.function.Consumer;
+
+public class GenericManagerImpl<T> implements GenericManager<T> {
     private final ClickUp4j clickUp4j;
 
     public GenericManagerImpl(@NotNull final ClickUp4j clickUp4j) {
@@ -30,5 +32,15 @@ public class GenericManagerImpl implements GenericManager {
     @Override
     public @NotNull ClickUp4j getClickUp4j() {
         return clickUp4j;
+    }
+
+    @Override
+    public void save(Consumer<T> consumer) {
+        throw new UnsupportedOperationException("Not implemented");
+    }
+
+    @Override
+    public T complete() {
+        throw new UnsupportedOperationException("Not implemented");
     }
 }
