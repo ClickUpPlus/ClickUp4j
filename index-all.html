@@ -56,6 +56,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">From the ClickUp API:</div>
 </dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#addAssignee(pw.chew.clickup4j.api.entities.User)" class="member-name-link">addAssignee(User)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>
+<div class="block">Adds an assignee to this task.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#addAssignee(pw.chew.clickup4j.api.entities.User)" class="member-name-link">addAssignee(User)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#addAssignees(pw.chew.clickup4j.api.entities.User...)" class="member-name-link">addAssignees(User...)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>
+<div class="block">Adds multiple assignees to this task.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#addAssignees(pw.chew.clickup4j.api.entities.User...)" class="member-name-link">addAssignees(User...)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/Member.Role.html#ADMIN" class="member-name-link">ADMIN</a> - Enum constant in enum class pw.chew.clickup4j.api.entities.<a href="pw/chew/clickup4j/api/entities/Member.Role.html" title="enum class in pw.chew.clickup4j.api.entities">Member.Role</a></dt>
 <dd>
 <div class="block">Has the ability to manage the workspace, invite new members, and even manage other admins, but not the owner.</div>
@@ -144,7 +156,13 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/ClickUp4jImpl.html#%3Cinit%3E(java.lang.String,okhttp3.OkHttpClient,pw.chew.clickup4j.internal.webhooks.WebhookServer,java.lang.String)" class="member-name-link">ClickUp4jImpl(String, OkHttpClient, WebhookServer, String)</a> - Constructor for class pw.chew.clickup4j.internal.<a href="pw/chew/clickup4j/internal/ClickUp4jImpl.html" title="class in pw.chew.clickup4j.internal">ClickUp4jImpl</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/GenericManager.html#complete()" class="member-name-link">complete()</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a></dt>
+<dd>
+<div class="block">Synchronously saves the entity.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#complete()" class="member-name-link">complete()</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/GenericManagerImpl.html#complete()" class="member-name-link">complete()</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/GenericManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">GenericManagerImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#complete()" class="member-name-link">complete()</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
 <dd>&nbsp;</dd>
@@ -256,11 +274,11 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:G">G</h2>
 <dl class="index">
-<dt><a href="pw/chew/clickup4j/api/entities/managers/GenericManager.html" class="type-name-link" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a> - Interface in <a href="pw/chew/clickup4j/api/entities/managers/package-summary.html">pw.chew.clickup4j.api.entities.managers</a></dt>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/GenericManager.html" class="type-name-link" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a>&lt;<a href="pw/chew/clickup4j/api/entities/managers/GenericManager.html" title="type parameter in GenericManager">T</a>&gt; - Interface in <a href="pw/chew/clickup4j/api/entities/managers/package-summary.html">pw.chew.clickup4j.api.entities.managers</a></dt>
 <dd>
 <div class="block">A generic manager for ClickUp entities.</div>
 </dd>
-<dt><a href="pw/chew/clickup4j/internal/entities/managers/GenericManagerImpl.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.entities.managers">GenericManagerImpl</a> - Class in <a href="pw/chew/clickup4j/internal/entities/managers/package-summary.html">pw.chew.clickup4j.internal.entities.managers</a></dt>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/GenericManagerImpl.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.entities.managers">GenericManagerImpl</a>&lt;<a href="pw/chew/clickup4j/internal/entities/managers/GenericManagerImpl.html" title="type parameter in GenericManagerImpl">T</a>&gt; - Class in <a href="pw/chew/clickup4j/internal/entities/managers/package-summary.html">pw.chew.clickup4j.internal.entities.managers</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/managers/GenericManagerImpl.html#%3Cinit%3E(pw.chew.clickup4j.api.ClickUp4j)" class="member-name-link">GenericManagerImpl(ClickUp4j)</a> - Constructor for class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/GenericManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">GenericManagerImpl</a></dt>
 <dd>&nbsp;</dd>
@@ -1700,6 +1718,18 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:R">R</h2>
 <dl class="index">
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#removeAssignee(pw.chew.clickup4j.api.entities.User)" class="member-name-link">removeAssignee(User)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>
+<div class="block">Removes an assignee from this task.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#removeAssignee(pw.chew.clickup4j.api.entities.User)" class="member-name-link">removeAssignee(User)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#removeAssignees(pw.chew.clickup4j.api.entities.User...)" class="member-name-link">removeAssignees(User...)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>
+<div class="block">Removes multiple assignees from this task.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#removeAssignees(pw.chew.clickup4j.api.entities.User...)" class="member-name-link">removeAssignees(User...)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/requests/Requester.html" class="type-name-link" title="class in pw.chew.clickup4j.internal.requests">Requester</a>&lt;<a href="pw/chew/clickup4j/internal/requests/Requester.html" title="type parameter in Requester">T</a>&gt; - Class in <a href="pw/chew/clickup4j/internal/requests/package-summary.html">pw.chew.clickup4j.internal.requests</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/requests/Requester.html#%3Cinit%3E(okhttp3.OkHttpClient,okhttp3.Request,java.util.function.Function)" class="member-name-link">Requester(OkHttpClient, Request, Function&lt;String, T&gt;)</a> - Constructor for class pw.chew.clickup4j.internal.requests.<a href="pw/chew/clickup4j/internal/requests/Requester.html" title="class in pw.chew.clickup4j.internal.requests">Requester</a></dt>
@@ -1799,9 +1829,21 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:S">S</h2>
 <dl class="index">
-<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#save()" class="member-name-link">save()</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#save(java.util.function.Consumer)" class="member-name-link">save(Consumer&lt;Task&gt;)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#save()" class="member-name-link">save()</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#save(java.util.function.Consumer)" class="member-name-link">save(Consumer&lt;Task&gt;)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/GenericManager.html#save(java.util.function.Consumer)" class="member-name-link">save(Consumer&lt;T&gt;)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a></dt>
+<dd>
+<div class="block">Saves the entity.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/GenericManagerImpl.html#save(java.util.function.Consumer)" class="member-name-link">save(Consumer&lt;T&gt;)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/GenericManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">GenericManagerImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#setDescription(java.lang.String)" class="member-name-link">setDescription(String)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>
+<div class="block">Changes the description of this task.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#setDescription(java.lang.String)" class="member-name-link">setDescription(String)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/ClickUp4jBuilder.html#setHttpClient(okhttp3.OkHttpClient)" class="member-name-link">setHttpClient(OkHttpClient)</a> - Method in class pw.chew.clickup4j.api.<a href="pw/chew/clickup4j/api/ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></dt>
 <dd>
@@ -1817,9 +1859,33 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#setName(java.lang.String)" class="member-name-link">setName(String)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#setParent(pw.chew.clickup4j.api.entities.Task)" class="member-name-link">setParent(Task)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>
+<div class="block">Sets the parent task of this task.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#setParent(pw.chew.clickup4j.api.entities.Task)" class="member-name-link">setParent(Task)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/internal/webhooks/WebhookServer.html#setPort(int)" class="member-name-link">setPort(int)</a> - Method in class pw.chew.clickup4j.internal.webhooks.<a href="pw/chew/clickup4j/internal/webhooks/WebhookServer.html" title="class in pw.chew.clickup4j.internal.webhooks">WebhookServer</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#setPriority(pw.chew.clickup4j.api.entities.Task.Priority)" class="member-name-link">setPriority(Task.Priority)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#setPriority(pw.chew.clickup4j.api.entities.Task.Priority)" class="member-name-link">setPriority(Task.Priority)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>
+<div class="block">Sets the priority of this task.</div>
+</dd>
 <dt><a href="pw/chew/clickup4j/internal/webhooks/WebhookServer.html#setSecret(java.lang.String)" class="member-name-link">setSecret(String)</a> - Method in class pw.chew.clickup4j.internal.webhooks.<a href="pw/chew/clickup4j/internal/webhooks/WebhookServer.html" title="class in pw.chew.clickup4j.internal.webhooks">WebhookServer</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#setStatus(pw.chew.clickup4j.api.entities.Task.Status)" class="member-name-link">setStatus(Task.Status)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#setStatus(pw.chew.clickup4j.api.entities.Task.Status)" class="member-name-link">setStatus(Task.Status)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>
+<div class="block">Sets the status of this task.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html#setTimeEstimate(java.time.Duration)" class="member-name-link">setTimeEstimate(Duration)</a> - Method in interface pw.chew.clickup4j.api.entities.managers.<a href="pw/chew/clickup4j/api/entities/managers/TaskManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">TaskManager</a></dt>
+<dd>
+<div class="block">Sets the time estimate of this task.</div>
+</dd>
+<dt><a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html#setTimeEstimate(java.time.Duration)" class="member-name-link">setTimeEstimate(Duration)</a> - Method in class pw.chew.clickup4j.internal.entities.managers.<a href="pw/chew/clickup4j/internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="pw/chew/clickup4j/api/ClickUp4jBuilder.html#setToken(java.lang.String)" class="member-name-link">setToken(String)</a> - Method in class pw.chew.clickup4j.api.<a href="pw/chew/clickup4j/api/ClickUp4jBuilder.html" title="class in pw.chew.clickup4j.api">ClickUp4jBuilder</a></dt>
 <dd>

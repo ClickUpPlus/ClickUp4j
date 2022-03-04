@@ -68,7 +68,7 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">pw.chew.clickup4j.api.entities.managers</a></div>
-<h1 title="Interface GenericManager" class="title">Interface GenericManager</h1>
+<h1 title="Interface GenericManager" class="title">Interface GenericManager&lt;T&gt;</h1>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../internal/entities/managers/GenericManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">GenericManagerImpl</a></code>, <code><a href="../../../internal/entities/managers/TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">GenericManager</span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">GenericManager&lt;T&gt;</span></div>
 <div class="block">A generic manager for ClickUp entities.</div>
 </section>
 <section class="summary">
@@ -96,10 +96,20 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="../../ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClickUp4j()" class="member-name-link">getClickUp4j</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="GenericManager.html" title="type parameter in GenericManager">T</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#complete()" class="member-name-link">complete</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Synchronously saves the entity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="../../ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getClickUp4j()" class="member-name-link">getClickUp4j</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the <a href="../../ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#save(java.util.function.Consumer)" class="member-name-link">save</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="GenericManager.html" title="type parameter in GenericManager">T</a>&gt;&nbsp;consumer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Saves the entity.</div>
 </div>
 </div>
 </div>
@@ -124,6 +134,29 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The <a href="../../ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="save(java.util.function.Consumer)">
+<h3>save</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">save</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="GenericManager.html" title="type parameter in GenericManager">T</a>&gt;&nbsp;consumer)</span></div>
+<div class="block">Saves the entity.
+ <br>Pass a consumer to be called when the request is complete.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>consumer</code> - The consumer to be called when the request is complete.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="complete()">
+<h3>complete</h3>
+<div class="member-signature"><span class="return-type"><a href="GenericManager.html" title="type parameter in GenericManager">T</a></span>&nbsp;<span class="element-name">complete</span>()</div>
+<div class="block">Synchronously saves the entity.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The saved entity.</dd>
 </dl>
 </section>
 </li>

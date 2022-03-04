@@ -68,24 +68,24 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">pw.chew.clickup4j.internal.entities.managers</a></div>
-<h1 title="Class GenericManagerImpl" class="title">Class GenericManagerImpl</h1>
+<h1 title="Class GenericManagerImpl" class="title">Class GenericManagerImpl&lt;T&gt;</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">pw.chew.clickup4j.internal.entities.managers.GenericManagerImpl</div>
+<div class="inheritance">pw.chew.clickup4j.internal.entities.managers.GenericManagerImpl&lt;T&gt;</div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a></code></dd>
+<dd><code><a href="../../../api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a>&lt;T&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
 <dd><code><a href="TaskManagerImpl.html" title="class in pw.chew.clickup4j.internal.entities.managers">TaskManagerImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">GenericManagerImpl</span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">GenericManagerImpl&lt;T&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="../../../api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a></span></div>
+implements <a href="../../../api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a>&lt;T&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -113,10 +113,20 @@ implements <a href="../../../api/entities/managers/GenericManager.html" title="i
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@NotNull <a href="../../../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClickUp4j()" class="member-name-link">getClickUp4j</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GenericManagerImpl.html" title="type parameter in GenericManagerImpl">T</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#complete()" class="member-name-link">complete</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Synchronously saves the entity.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@NotNull <a href="../../../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api">ClickUp4j</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClickUp4j()" class="member-name-link">getClickUp4j</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the <a href="../../../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#save(java.util.function.Consumer)" class="member-name-link">save</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="GenericManagerImpl.html" title="type parameter in GenericManagerImpl">T</a>&gt;&nbsp;consumer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Saves the entity.</div>
 </div>
 </div>
 </div>
@@ -159,9 +169,38 @@ implements <a href="../../../api/entities/managers/GenericManager.html" title="i
 <div class="block">Returns the <a href="../../../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../../../api/entities/managers/GenericManager.html#getClickUp4j()">getClickUp4j</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a></code></dd>
+<dd><code><a href="../../../api/entities/managers/GenericManager.html#getClickUp4j()">getClickUp4j</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a>&lt;<a href="GenericManagerImpl.html" title="type parameter in GenericManagerImpl">T</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>The <a href="../../../api/ClickUp4j.html" title="interface in pw.chew.clickup4j.api"><code>ClickUp4j</code></a> instance.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="save(java.util.function.Consumer)">
+<h3>save</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">save</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="GenericManagerImpl.html" title="type parameter in GenericManagerImpl">T</a>&gt;&nbsp;consumer)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../api/entities/managers/GenericManager.html#save(java.util.function.Consumer)">GenericManager</a></code></span></div>
+<div class="block">Saves the entity.
+ <br>Pass a consumer to be called when the request is complete.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../api/entities/managers/GenericManager.html#save(java.util.function.Consumer)">save</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a>&lt;<a href="GenericManagerImpl.html" title="type parameter in GenericManagerImpl">T</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>consumer</code> - The consumer to be called when the request is complete.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="complete()">
+<h3>complete</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GenericManagerImpl.html" title="type parameter in GenericManagerImpl">T</a></span>&nbsp;<span class="element-name">complete</span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../../api/entities/managers/GenericManager.html#complete()">GenericManager</a></code></span></div>
+<div class="block">Synchronously saves the entity.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../api/entities/managers/GenericManager.html#complete()">complete</a></code>&nbsp;in interface&nbsp;<code><a href="../../../api/entities/managers/GenericManager.html" title="interface in pw.chew.clickup4j.api.entities.managers">GenericManager</a>&lt;<a href="GenericManagerImpl.html" title="type parameter in GenericManagerImpl">T</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>The saved entity.</dd>
 </dl>
 </section>
 </li>
