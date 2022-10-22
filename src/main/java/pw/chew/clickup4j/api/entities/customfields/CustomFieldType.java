@@ -87,6 +87,10 @@ public enum CustomFieldType {
      */
     SHORT_TEXT(16),
     /**
+     * Represents a location field.
+     */
+    LOCATION(17),
+    /**
      * Represents a new field unknown to this library.
      */
     UNKNOWN(-1),
@@ -154,6 +158,8 @@ public enum CustomFieldType {
                 return ManualProgressCustomField.class;
             case SHORT_TEXT:
                 return ShortTextCustomField.class;
+            case LOCATION:
+                return LocationCustomField.class;
             default:
                 return null;
         }
